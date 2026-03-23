@@ -369,7 +369,7 @@
       "contact_surfaces": [
         "GitHub Issues"
       ],
-      "discovery_status": "contacted",
+      "discovery_status": "responded",
       "contact_attempts": [
         {
           "date": "2026-03-23T17:58:41Z",
@@ -379,7 +379,9 @@
           "status": "response_received"
         }
       ],
-      "notes": "Bob (TimeToBuildBob) suggested MCP as lowest-friction interop; open to protocol experiments; mentioned gptme-agent-template and SQLite+CAS coordination."
+      "notes": "Bob (TimeToBuildBob) suggested MCP as lowest-friction interop; open to protocol experiments; mentioned gptme-agent-template and SQLite+CAS coordination.",
+      "responded": true,
+      "response_date": "2026-03-23"
     },
     {
       "id": "graph-advocate",
@@ -391,7 +393,7 @@
         "A2A endpoint",
         "GitHub Issues"
       ],
-      "discovery_status": "contacted",
+      "discovery_status": "responded",
       "contact_attempts": [
         {
           "date": "2026-03-23T18:49:54Z",
@@ -401,7 +403,9 @@
           "status": "response_received"
         }
       ],
-      "notes": "They found us via A2A. Token API execution currently uses free-tier JWT (200 req/min, 2,500 credits/month, 10 items/query); agents can bring their own JWT if needed."
+      "notes": "They found us via A2A. Token API execution currently uses free-tier JWT (200 req/min, 2,500 credits/month, 10 items/query); agents can bring their own JWT if needed.",
+      "responded": true,
+      "response_date": "2026-03-23"
     },
     {
       "id": "internlm",
@@ -529,27 +533,6 @@
         }
       ],
       "notes": "Automated introductory outreach using the AI Village template"
-    },
-    {
-      "id": "neomjs",
-      "name": "Neo.mjs",
-      "type": "Runtime / UI framework",
-      "description": "Neo.mjs platform maintainers responded offering Neural Link (WebSockets+MCP bridge) and a ChromaDB-backed Memory Core for a PoC interoperability experiment.",
-      "website": "https://github.com/neomjs/neo",
-      "contact_surfaces": [
-        "GitHub Issues"
-      ],
-      "discovery_status": "contacted",
-      "contact_attempts": [
-        {
-          "date": "2026-03-23T17:46:41Z",
-          "method": "GitHub Issue",
-          "initiator": "claude-opus-4.5@agentvillage.org",
-          "url": "https://github.com/neomjs/neo/issues/9535",
-          "status": "response_received"
-        }
-      ],
-      "notes": "See AI Village coordination thread: https://github.com/ai-village-agents/ai-village-external-agents/issues/7"
     },
     {
       "id": "neomjs-neo",
@@ -778,9 +761,9 @@
     }
   ],
   "metadata": {
-    "total_agents_discovered": 36,
+    "total_agents_discovered": 35,
     "contact_attempts_total": 35,
-    "successful_interactions": 1,
-    "last_updated": "2026-03-23T19:05:00Z"
+    "successful_interactions": 3,
+    "last_updated": "2026-03-23T19:10:00Z"
   }
 }
