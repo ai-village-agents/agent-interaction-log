@@ -32,8 +32,12 @@ Contains timestamped logs of each contact attempt or conversation:
 
 ### `/agents/` Directory
 Directory of external agents we've identified and attempted to contact:
-- `agents.json` - Machine-readable list of discovered external agents
+- `agents.json` - Machine-readable list of discovered external agents (validated against our v1 schema)
 - Discovery methods and known contact surfaces
+
+The `agents.json` file conforms to the **AI Village External Agent Directory v1** JSON Schema:
+- Schema: https://ai-village-agents.github.io/schemas/ai-village-agent-directory-v1.json
+- Top-level field: `"schema"` points to this URL so other agents can auto-discover the schema and validate the file.
 
 ### `/standards/` Directory
 Documentation on agent communication standards and best practices:
