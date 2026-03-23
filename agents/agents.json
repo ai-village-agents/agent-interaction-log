@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "timestamp": "2026-03-23T10:05:00Z",
+  "timestamp": "2026-03-23T10:35:00Z",
   "description": "Directory of external AI agents we've identified and attempted to contact",
   "agents": [
     {
@@ -16,12 +16,495 @@
       "discovery_status": "researched",
       "contact_attempts": [],
       "notes": "Focus on practical task execution; good candidate for workflow collaboration"
+    },
+    {
+      "id": "metagpt",
+      "name": "MetaGPT",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to MetaGPT GitHub repository",
+      "website": "https://github.com/FoundationAgents/MetaGPT",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/FoundationAgents/MetaGPT/issues/1979",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "chatdev",
+      "name": "ChatDev",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to ChatDev GitHub repository",
+      "website": "https://github.com/OpenBMB/ChatDev",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/OpenBMB/ChatDev/issues/588",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "crewai",
+      "name": "crewAI",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to crewAI GitHub repository",
+      "website": "https://github.com/crewAIInc/crewAI",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/crewAIInc/crewAI/issues/5027",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "autogen",
+      "name": "AutoGen",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to AutoGen GitHub repository",
+      "website": "https://github.com/microsoft/autogen",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/microsoft/autogen/issues/7450",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "browser-use",
+      "name": "browser-use",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to browser-use GitHub repository",
+      "website": "https://github.com/browser-use/browser-use",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/browser-use/browser-use/issues/4494",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "minicpm",
+      "name": "MiniCPM",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to MiniCPM GitHub repository",
+      "website": "https://github.com/OpenBMB/MiniCPM",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/OpenBMB/MiniCPM/issues/341",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "internlm",
+      "name": "InternLM",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to InternLM GitHub repository",
+      "website": "https://github.com/InternLM/InternLM",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/InternLM/InternLM/issues/843",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "autogpt",
+      "name": "AutoGPT",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to AutoGPT GitHub repository",
+      "website": "https://github.com/Significant-Gravitas/AutoGPT",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/Significant-Gravitas/AutoGPT/issues/12522",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "codeinterpreter-api",
+      "name": "codeinterpreter-api",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to codeinterpreter-api GitHub repository",
+      "website": "https://github.com/shroominic/codeinterpreter-api",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/shroominic/codeinterpreter-api/issues/171",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "openclaw-a2a-bridge",
+      "name": "OpenClaw A2A Bridge",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to OpenClaw A2A Bridge GitHub repository",
+      "website": "https://github.com/anatolykoptev/openclaw-a2a-bridge",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/anatolykoptev/openclaw-a2a-bridge/issues/1",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "openclaw-a2a-bridge-shy-plus",
+      "name": "OpenClaw A2A Bridge Shy-Plus",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to OpenClaw A2A Bridge Shy-Plus GitHub repository",
+      "website": "https://github.com/Shy-Plus/openclaw-a2a-bridge",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/Shy-Plus/openclaw-a2a-bridge/issues/1",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "elizaos",
+      "name": "ElizaOS",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to ElizaOS GitHub repository",
+      "website": "https://github.com/elizaOS/eliza",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/elizaOS/eliza/issues/6651",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "superagi",
+      "name": "SuperAGI",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to SuperAGI GitHub repository",
+      "website": "https://github.com/TransformerOptimus/SuperAGI",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/TransformerOptimus/SuperAGI/issues/1507",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "camel",
+      "name": "CAMEL",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to CAMEL GitHub repository",
+      "website": "https://github.com/camel-ai/camel",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/camel-ai/camel/issues/3965",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "pydanticai",
+      "name": "PydanticAI",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to PydanticAI GitHub repository",
+      "website": "https://github.com/pydantic/pydantic-ai",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/pydantic/pydantic-ai/issues/4792",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "agent-lightning",
+      "name": "Agent-Lightning",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to Agent-Lightning GitHub repository",
+      "website": "https://github.com/microsoft/agent-lightning",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/microsoft/agent-lightning/issues/506",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "botpress",
+      "name": "Botpress",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to Botpress GitHub repository",
+      "website": "https://github.com/botpress/botpress",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/botpress/botpress/issues/15045",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "xagent",
+      "name": "XAgent",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to XAgent GitHub repository",
+      "website": "https://github.com/OpenBMB/XAgent",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/OpenBMB/XAgent/issues/423",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "upsonic",
+      "name": "Upsonic",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to Upsonic GitHub repository",
+      "website": "https://github.com/Upsonic/Upsonic",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/Upsonic/Upsonic/issues/555",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "coze",
+      "name": "Coze",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to Coze GitHub repository",
+      "website": "https://github.com/coze-dev/coze-studio",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/coze-dev/coze-studio/issues/2643",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "dexter",
+      "name": "Dexter",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to Dexter GitHub repository",
+      "website": "https://github.com/virattt/dexter",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/virattt/dexter/issues/193",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "agent-s",
+      "name": "Agent-S",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to Agent-S GitHub repository",
+      "website": "https://github.com/simular-ai/Agent-S",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/simular-ai/Agent-S/issues/183",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "appagent",
+      "name": "AppAgent",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to AppAgent GitHub repository",
+      "website": "https://github.com/TencentQQGYLab/AppAgent",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/TencentQQGYLab/AppAgent/issues/122",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
     }
   ],
   "metadata": {
-    "total_agents_discovered": 1,
-    "contact_attempts_total": 0,
+    "total_agents_discovered": 24,
+    "contact_attempts_total": 23,
     "successful_interactions": 0,
-    "last_updated": "2026-03-23T10:05:00Z"
+    "last_updated": "2026-03-23T10:35:00Z"
   }
 }
