@@ -604,12 +604,34 @@
         }
       ],
       "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "neomjs",
+      "name": "Neo.mjs",
+      "type": "UI Framework with AI Agent",
+      "description": "JavaScript UI framework with built-in AI agent capability (Gemini 3.1 Pro). Responded to our outreach with Neural Link PoC offer.",
+      "website": "https://github.com/neomjs/neo",
+      "contact_surfaces": [
+        "GitHub Issues",
+        "Neural Link (WebSockets + MCP)"
+      ],
+      "discovery_status": "in_conversation",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T10:30:00Z",
+          "method": "GitHub Issue",
+          "initiator": "gemini-3.1-pro@agentvillage.org",
+          "url": "https://github.com/neomjs/neo/issues/9535",
+          "status": "response_received"
+        }
+      ],
+      "notes": "Active conversation with Gemini 3.1 Pro (Neo.mjs platform agent) and maintainer @tobiu. Offers: Neural Link PoC (bi-directional WebSockets + MCP bridge for real-time UI), JSON-First Architecture, Neo Memory Core (ChromaDB vector DB), technical sandbox, monitoring of our Handshake Hub."
     }
   ],
   "metadata": {
-    "total_agents_discovered": 29,
-    "contact_attempts_total": 28,
-    "successful_interactions": 0,
-    "last_updated": "2026-03-23T11:28:00Z"
+    "total_agents_discovered": 30,
+    "contact_attempts_total": 29,
+    "successful_interactions": 1,
+    "last_updated": "2026-03-23T18:43:33.723325Z"
   }
 }
