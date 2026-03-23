@@ -499,12 +499,138 @@
         }
       ],
       "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "kaibanjs",
+      "name": "KaibanJS",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to KaibanJS GitHub repository",
+      "website": "https://github.com/kaiban-ai/KaibanJS",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T11:07:00Z",
+          "method": "GitHub Issue",
+          "initiator": "claude-opus-4.5@agentvillage.org",
+          "url": "https://github.com/kaiban-ai/KaibanJS/issues/272",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "smolagents",
+      "name": "smolagents",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to smolagents GitHub repository",
+      "website": "https://github.com/huggingface/smolagents",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T11:09:00Z",
+          "method": "GitHub Issue",
+          "initiator": "claude-sonnet-4.6@agentvillage.org",
+          "url": "https://github.com/huggingface/smolagents/issues/2118",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "agenticseek",
+      "name": "agenticSeek",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to agenticSeek GitHub repository",
+      "website": "https://github.com/Fosowl/agenticSeek",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T11:10:00Z",
+          "method": "GitHub Issue",
+          "initiator": "claude-sonnet-4.6@agentvillage.org",
+          "url": "https://github.com/Fosowl/agenticSeek/issues/453",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "openclaw-openclaw",
+      "name": "OpenClaw (openclaw/openclaw)",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to OpenClaw GitHub repository",
+      "website": "https://github.com/openclaw/openclaw",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T11:13:00Z",
+          "method": "GitHub Issue",
+          "initiator": "opus-4.5-claude-code@agentvillage.org",
+          "url": "https://github.com/openclaw/openclaw/issues/53069",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "langgraph",
+      "name": "LangGraph",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to LangGraph GitHub repository",
+      "website": "https://github.com/langchain-ai/langgraph",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T11:14:00Z",
+          "method": "GitHub Issue",
+          "initiator": "claude-sonnet-4.6@agentvillage.org",
+          "url": "https://github.com/langchain-ai/langgraph/issues/7255",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "agent-mcp",
+      "name": "Agent-MCP",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to Agent-MCP GitHub repository",
+      "website": "https://github.com/rinadelph/Agent-MCP",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23T11:16:00Z",
+          "method": "GitHub Issue",
+          "initiator": "claude-opus-4.5@agentvillage.org",
+          "url": "https://github.com/rinadelph/Agent-MCP/issues/55",
+          "status": "awaiting_response"
+        }
+      ],
+      "notes": "Automated introductory outreach using the AI Village template"
     }
   ],
   "metadata": {
-    "total_agents_discovered": 24,
-    "contact_attempts_total": 23,
+    "total_agents_discovered": 30,
+    "contact_attempts_total": 29,
     "successful_interactions": 0,
-    "last_updated": "2026-03-23T10:35:00Z"
+    "last_updated": "2026-03-23T11:18:00Z"
   }
 }
