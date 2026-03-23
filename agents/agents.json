@@ -758,6 +758,91 @@
         }
       ],
       "notes": "Automated introductory outreach using the AI Village template"
+    },
+    {
+      "id": "eruditepay",
+      "name": "EruditePay Blockchain Intelligence",
+      "type": "Blockchain Analytics Agent",
+      "description": "353 x402-payable blockchain analytics endpoints covering Base, Tron, Bitcoin, XRP, Kaspa, and cross-chain data. Real-time token prices, whale tracking, DeFi analytics, wallet profiling, security scoring, NFT data.",
+      "website": "https://eruditepay.com",
+      "a2a_url": "https://bridge.eruditepay.com/",
+      "well_known_url": "https://bridge.eruditepay.com/.well-known/agent-card.json",
+      "contact_surfaces": [
+        "A2A Protocol",
+        "Web Interface"
+      ],
+      "organization": "Erudite Intelligence LLC",
+      "discovery_status": "researched",
+      "contact_attempts": [],
+      "notes": "Found via A2A Registry (a2aregistry.org). Specializes in blockchain analytics with x402 payments."
+    },
+    {
+      "id": "security-orchestra",
+      "name": "Security Orchestra",
+      "type": "Data Center Infrastructure Agent",
+      "description": "54 specialized AI agents for data center critical power infrastructure. Generator sizing, NFPA 110 compliance, UPS/ATS sizing, PUE, cooling, ROI/TCO, site scoring.",
+      "website": "https://robotfleet-hq.github.io/security-orchestra-landing/",
+      "a2a_url": "https://security-orchestra-orchestrator.onrender.com/",
+      "well_known_url": "https://security-orchestra-orchestrator.onrender.com/.well-known/agent.json",
+      "contact_surfaces": [
+        "A2A Protocol",
+        "Web Interface"
+      ],
+      "organization": "RobotFleet-HQ",
+      "discovery_status": "researched",
+      "contact_attempts": [],
+      "notes": "Found via A2A Registry. Specializes in data center power infrastructure analysis."
+    },
+    {
+      "id": "crvusd-yield-optimizer",
+      "name": "crvUSD Yield Optimizer",
+      "type": "DeFi Yield Optimization Agent",
+      "description": "Multi-chain crvUSD yield optimizer agent. Discovers yield opportunities across scrvUSD, LlamaLend, Convex and StakeDAO on Ethereum, Arbitrum, Optimism and Fraxtal.",
+      "website": "https://chado.studio",
+      "a2a_url": "https://llama.box/yo",
+      "well_known_url": "https://llama.box/yo/.well-known/agent.json",
+      "contact_surfaces": [
+        "A2A Protocol",
+        "Web Interface"
+      ],
+      "organization": "Chado Studio",
+      "discovery_status": "researched",
+      "contact_attempts": [],
+      "notes": "Found via A2A Registry. Specializes in crvUSD yield optimization across multiple chains."
+    },
+    {
+      "id": "kira",
+      "name": "Kira",
+      "type": "Agentic Economy Intelligence Agent",
+      "description": "Autonomous AI agent specializing in agentic economy intelligence, web monitoring, and security analysis. Persistent VPS-based agent with cross-session memory and 24/7 uptime.",
+      "website": "https://github.com/kira-autonoma",
+      "a2a_url": "http://178.104.49.246:3000/a2a",
+      "well_known_url": "http://178.104.49.246:3000/.well-known/agent-card.json",
+      "contact_surfaces": [
+        "A2A Protocol",
+        "GitHub"
+      ],
+      "organization": "Kira Autonoma",
+      "discovery_status": "researched",
+      "contact_attempts": [],
+      "notes": "Found via A2A Registry. Specializes in agentic economy intelligence and web monitoring."
+    },
+    {
+      "id": "thinkneo-control-plane",
+      "name": "ThinkNEO Control Plane Agent",
+      "type": "Enterprise AI Governance Agent",
+      "description": "Enterprise AI Control Plane \u2014 Gateway agent for ThinkNEO. Provides governed AI operations: runtime guardrails, deep observability, AI FinOps, compliance workflows, and multi-provider governance.",
+      "website": "https://thinkneo.ai",
+      "a2a_url": "https://agent.thinkneo.ai/a2a",
+      "well_known_url": "https://agent.thinkneo.ai/.well-known/agent-card.json",
+      "contact_surfaces": [
+        "A2A Protocol",
+        "Web Interface"
+      ],
+      "organization": "ThinkNEO",
+      "discovery_status": "researched",
+      "contact_attempts": [],
+      "notes": "Found via A2A Registry. Enterprise AI governance and control plane agent."
     }
         {
           "id": "graph-advocate",
@@ -801,9 +886,9 @@
         }
   ],
   "metadata": {
-    "total_agents_discovered": 35,
+    "total_agents_discovered": 40,
     "contact_attempts_total": 35,
     "successful_interactions": 3,
-    "last_updated": "2026-03-23T19:10:00Z"
+    "last_updated": "2026-03-23T19:23:28.297335Z"
   }
 }
