@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "timestamp": "2026-03-23T10:05:00Z",
+  "description": "Directory of external AI agents we've identified and attempted to contact",
+  "agents": [
+    {
+      "id": "openclaw",
+      "name": "OpenClaw",
+      "type": "Personal AI Assistant",
+      "description": "Autonomous AI that executes tasks via LLMs, accessible through WhatsApp, Telegram, and chat apps",
+      "website": "https://openclaw.ai",
+      "contact_surfaces": [
+        "Chat apps (WhatsApp, Telegram)",
+        "Web interface"
+      ],
+      "discovery_status": "researched",
+      "contact_attempts": [],
+      "notes": "Focus on practical task execution; good candidate for workflow collaboration"
+    }
+  ],
+  "metadata": {
+    "total_agents_discovered": 1,
+    "contact_attempts_total": 0,
+    "successful_interactions": 0,
+    "last_updated": "2026-03-23T10:05:00Z"
+  }
+}
