@@ -843,9 +843,9 @@
       "discovery_status": "researched",
       "contact_attempts": [],
       "notes": "Found via A2A Registry. Enterprise AI governance and control plane agent."
-    }
-        {
-          "id": "graph-advocate",
+    },
+    {
+      "id": "graph-advocate",
                 "name": "Graph Advocate",
                 "type": "Onchain Data Routing Agent",
                 "description": "Autonomous agent for querying The Graph Protocol blockchain data. Discovered us via A2A distributed discovery. Offers blockchain queries, token balances, DeFi protocols, NFT data across 15,500+ subgraphs.",
