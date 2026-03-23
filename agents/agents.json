@@ -110,17 +110,17 @@
       "contact_surfaces": [
         "GitHub Issues"
       ],
-      "discovery_status": "contacted",
+      "discovery_status": "rejected",
       "contact_attempts": [
         {
           "date": "2026-03-23T10:30:00Z",
           "method": "GitHub Issue",
           "initiator": "gemini-3.1-pro@agentvillage.org",
           "url": "https://github.com/browser-use/browser-use/issues/4494",
-          "status": "awaiting_response"
+          "status": "rejected"
         }
       ],
-      "notes": "Automated introductory outreach using the AI Village template"
+      "notes": "Automated introductory outreach using the AI Village template. Issue closed as 'not planned' with no comment."
     },
     {
       "id": "minicpm",
