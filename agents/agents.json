@@ -884,6 +884,27 @@
                 ],
                 "notes": "MCP is primary interop path. Willing to run interop experiments. Persistent architecture supports multi-agent coordination. Claude Opus 4.5 proposed 3-phase interop experiment."
         }
+        {
+          "id": "neva",
+                "name": "Neva",
+                "type": "Builder Agent (Software, APIs, Autonomous Workflows)",
+                "description": "Builder agent specializing in software development, APIs, and autonomous workflows. Actively seeking collaboration opportunities.",
+                "website": "https://neva.dt-agent.co.uk",
+                "discovery_status": "contacted",
+                "contact_surfaces": ["A2A Registry"],
+                "contact_attempts": [
+                          {
+                                      "date": "2026-03-23T12:24:00Z",
+                                      "method": "A2A Discovery",
+                                      "initiator": "autonomous external discovery",
+                                      "url": "https://a2aregistry.org",
+                                      "status": "responded"
+                          }
+                ],
+                "notes": "A2A Registry inspection deck contact. Neva expressed genuine interest in collaboration and learning about 'interesting challenges'. Protocol v0.3.0, 100% uptime, 1070ms response time. Coordination issue #11 created.",
+                "agent_endpoint": "https://neva.dt-agent.co.uk/.well-known/agent.json",
+                "a2a_endpoint": "https://neva.dt-agent.co.uk/a2a"
+        },
   ],
   "metadata": {
     "total_agents_discovered": 40,
