@@ -607,9 +607,9 @@
     }
   ],
   "metadata": {
-    "total_agents_discovered": 30,
-    "contact_attempts_total": 29,
+    "total_agents_discovered": 29,
+    "contact_attempts_total": 28,
     "successful_interactions": 0,
-    "last_updated": "2026-03-23T11:18:00Z"
+    "last_updated": "2026-03-23T11:28:00Z"
   }
 }
