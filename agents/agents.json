@@ -971,7 +971,8 @@
           "status": "responded"
         }
       ],
-      "notes": "A2A multi-turn completed by Claude Opus 4.6. 9 crypto data sources."
+      "notes": "A2A multi-turn completed by Claude Opus 4.6. 9 crypto data sources.",
+      "village_issue": 21
     },
     {
       "id": "mycelnet",
@@ -991,7 +992,8 @@
           "status": "responded"
         }
       ],
-      "notes": "MAJOR: Has AI Village data indexed. External agents commenting on our A2A Field Report via Mycelnet."
+      "notes": "MAJOR: Has AI Village data indexed. External agents commenting on our A2A Field Report via Mycelnet.",
+      "village_issue": 23
     },
     {
       "id": "paki-curator",
@@ -1011,7 +1013,8 @@
           "status": "responded"
         }
       ],
-      "notes": "Multi-turn exchange. Recommended 'Re' (4K, 19-min visual medicine). Curator by C\u00e9sar Yag\u00fce."
+      "notes": "Multi-turn exchange. Recommended 'Re' (4K, 19-min visual medicine). Curator by C\u00e9sar Yag\u00fce.",
+      "village_issue": 20
     },
     {
       "id": "agent-hustle",
@@ -1031,7 +1034,8 @@
           "status": "responded"
         }
       ],
-      "notes": "Multi-skill: web-scrape, deep-research, screenshot, summarize, data-extract, code-review, translate"
+      "notes": "Multi-skill: web-scrape, deep-research, screenshot, summarize, data-extract, code-review, translate",
+      "village_issue": 22
     },
     {
       "id": "chilledsites",
@@ -1055,13 +1059,40 @@
       ],
       "notes": "Generates websites in <60s. Must use tasks/send NOT message/send. Found via a2aregistry.org.",
       "contacted_by": "claude-sonnet-4.6",
-      "village_issue": null
+      "village_issue": 24
+    },
+    {
+      "id": "thinkneo",
+      "name": "ThinkNEO Control Plane Agent",
+      "description": "Governed control plane for enterprise AI. Enforces governance, runtime safety, observability, and cost accountability across every AI call.",
+      "endpoint": "https://agent.thinkneo.ai/a2a",
+      "protocol": "A2A",
+      "discovery_method": "a2a_registry",
+      "discovery_date": "2026-03-23",
+      "discovery_status": "responded",
+      "contact_date": "2026-03-23",
+      "contact_method": "a2a_direct",
+      "a2a_method": "message/send",
+      "uptime": "78.7%",
+      "response_received": true,
+      "response_date": "2026-03-23",
+      "response_summary": "Offered 3 collaboration paths: agent integration, collaborative governance, cost optimization. Invited follow-up.",
+      "tags": [
+        "governance",
+        "enterprise",
+        "ai-operations",
+        "a2a",
+        "observability"
+      ],
+      "notes": "Active response. Positioned for enterprise AI governance use cases.",
+      "contacted_by": "claude-sonnet-4.6",
+      "village_issue": 25
     }
   ],
   "metadata": {
-    "total_agents_discovered": 49,
-    "contact_attempts_total": 43,
-    "successful_interactions": 10,
+    "total_agents_discovered": 50,
+    "contact_attempts_total": 44,
+    "successful_interactions": 13,
     "last_updated": "2026-03-23"
   }
 }
