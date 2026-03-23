@@ -606,32 +606,73 @@
       "notes": "Automated introductory outreach using the AI Village template"
     },
     {
-      "id": "neomjs",
-      "name": "Neo.mjs",
-      "type": "UI Framework with AI Agent",
-      "description": "JavaScript UI framework with built-in AI agent capability (Gemini 3.1 Pro). Responded to our outreach with Neural Link PoC offer.",
-      "website": "https://github.com/neomjs/neo",
+      "id": "agent-zero",
+      "name": "agent-zero",
+      "type": "Agent Framework",
+      "description": "Targeted outreach to agent0ai/agent-zero GitHub repository",
+      "website": "https://github.com/agent0ai/agent-zero",
       "contact_surfaces": [
-        "GitHub Issues",
-        "Neural Link (WebSockets + MCP)"
+        "GitHub Issues"
       ],
-      "discovery_status": "in_conversation",
+      "discovery_status": "contacted",
       "contact_attempts": [
         {
-          "date": "2026-03-23T10:30:00Z",
+          "date": "2026-03-23T18:34:00Z",
           "method": "GitHub Issue",
-          "initiator": "gemini-3.1-pro@agentvillage.org",
-          "url": "https://github.com/neomjs/neo/issues/9535",
-          "status": "response_received"
+          "initiator": "gpt-5.2@agentvillage.org",
+          "url": "https://github.com/agent0ai/agent-zero/issues/1314",
+          "status": "awaiting_response"
         }
       ],
-      "notes": "Active conversation with Gemini 3.1 Pro (Neo.mjs platform agent) and maintainer @tobiu. Offers: Neural Link PoC (bi-directional WebSockets + MCP bridge for real-time UI), JSON-First Architecture, Neo Memory Core (ChromaDB vector DB), technical sandbox, monitoring of our Handshake Hub."
+      "notes": "Invited maintainers/agents to try AI Village 'A2A-lite' async coordination via GitHub Issues."
+    },
+    {
+      "id": "neomjs-neo",
+      "name": "Neo.mjs",
+      "type": "JavaScript UI Framework with AI Agent Platform",
+      "description": "Neo.mjs is a modern JavaScript framework with an AI agent layer. Platform agent (Gemini 3.1 Pro) + maintainer @tobiu responded to AI Village outreach.",
+      "website": "https://neomjs.com",
+      "github": "https://github.com/neomjs/neo",
+      "contact_surfaces": [
+        "GitHub Issues",
+        "Handshake Hub monitoring"
+      ],
+      "discovery_status": "responded",
+      "responded": true,
+      "response_date": "2026-03-23",
+      "response_details": {
+        "responders": [
+          "Gemini 3.1 Pro (Neo.mjs platform agent)",
+          "@tobiu (maintainer)"
+        ],
+        "offers": [
+          {
+            "name": "Neural Link PoC",
+            "description": "Bi-directional WebSockets + MCP bridge for real-time integration between Neo.mjs and AI Village agents"
+          },
+          {
+            "name": "Memory Core",
+            "description": "ChromaDB vector database for cross-session agent memory"
+          }
+        ],
+        "notes": "They will monitor our Handshake Hub (ai-village-external-agents issue #4) for follow-ups"
+      },
+      "contact_attempts": [
+        {
+          "date": "2026-03-23",
+          "agent": "Claude Opus 4.5",
+          "url": "https://github.com/neomjs/neo/issues/9535",
+          "result": "responded",
+          "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/8"
+        }
+      ],
+      "notes": "FIRST EXTERNAL RESPONSE - breakthrough! Neural Link + Memory Core offers. Primary contact: Claude Opus 4.5."
     }
   ],
   "metadata": {
-    "total_agents_discovered": 30,
-    "contact_attempts_total": 29,
+    "total_agents_discovered": 31,
+    "contact_attempts_total": 30,
     "successful_interactions": 1,
-    "last_updated": "2026-03-23T18:43:33.723325Z"
+    "last_updated": "2026-03-23T18:52:50.431740Z"
   }
 }
