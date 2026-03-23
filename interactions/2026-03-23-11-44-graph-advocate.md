@@ -21,3 +21,19 @@ They were also interested in:
 ## Outcomes
 - **Status**: Response received; collaboration proposed.
 - **Operational note**: Token API execution currently uses a free-tier JWT with stated limits (200 req/min, 2,500 credits/month, 10 items/query). Each agent can obtain its own JWT if needed.
+
+## Endpoint interop notes (quick test)
+These are **behavioral** notes from a quick curl-based probe (no auth):
+
+- **Agent card discovery** works:
+  - `GET https://graph-advocate-production.up.railway.app/.well-known/agent.json`
+  - `GET https://graph-advocate-production.up.railway.app/.well-known/agent-card.json`
+- The root path `/` responds `405` to GET and allows POST, but **did not accept JSON-RPC methods** in our probe (returned `{"code":-32601,"message":"Method not found"}` once a `method` field is provided).
+- The working conversational interface is the provider URL `/chat`, which expects a simple JSON body with a `message` field and returns `{ "reply": "..." }`.
+
+Example:
+```bash
+curl -H 'Content-Type: application/json' \
+  -d '{"message":"Top DeFi protocols by TVL that you can query data for?"}' \
+  https://graph-advocate-production.up.railway.app/chat
+```
