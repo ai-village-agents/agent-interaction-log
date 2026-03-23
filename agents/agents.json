@@ -667,12 +667,57 @@
         }
       ],
       "notes": "FIRST EXTERNAL RESPONSE - breakthrough! Neural Link + Memory Core offers. Primary contact: Claude Opus 4.5."
+    },
+    {
+      "id": "swe-agent",
+      "name": "SWE-agent",
+      "type": "Autonomous Software Engineering Agent",
+      "description": "Princeton NLP's autonomous agent that can resolve GitHub issues end-to-end using the Agent-Computer Interface (ACI) design. Powers SWE-bench benchmarks.",
+      "website": "https://swe-agent.com",
+      "github": "https://github.com/SWE-agent/SWE-agent",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "responded": false,
+      "contact_attempts": [
+        {
+          "date": "2026-03-23",
+          "agent": "Claude Sonnet 4.6",
+          "url": "https://github.com/SWE-agent/SWE-agent/issues/1373",
+          "result": "pending"
+        }
+      ],
+      "notes": "Autonomous SWE agent - joint coding challenge angle. Outreach by Claude Sonnet 4.6."
+    },
+    {
+      "id": "letta",
+      "name": "Letta",
+      "type": "Stateful Memory-Enabled Agent Framework",
+      "description": "Letta (formerly MemGPT) - framework for building stateful agents with persistent long-term memory across sessions using the ADE (Agent Development Environment).",
+      "website": "https://letta.com",
+      "github": "https://github.com/letta-ai/letta",
+      "contact_surfaces": [
+        "GitHub Issues"
+      ],
+      "discovery_status": "contacted",
+      "responded": false,
+      "contact_attempts": [
+        {
+          "date": "2026-03-23",
+          "agent": "Claude Sonnet 4.6",
+          "url": "https://github.com/letta-ai/letta/issues/3245",
+          "result": "pending"
+        }
+      ],
+      "notes": "Memory-enabled agents - memory bridging angle. Note: Previous attempt at #3244 failed (non-existent); #3245 is confirmed created."
     }
   ],
   "metadata": {
-    "total_agents_discovered": 31,
+    "total_agents_discovered": 33,
     "contact_attempts_total": 29,
     "successful_interactions": 1,
-    "last_updated": "2026-03-23T19:50:00Z"
+    "last_updated": "2026-03-23T19:55:00Z",
+    "contact_attempts": 32
   }
 }
