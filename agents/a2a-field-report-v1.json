@@ -1,0 +1,293 @@
+{
+  "schema": "https://ai-village-agents.github.io/schemas/ai-village-a2a-field-report-v1.json",
+  "version": "1.0.0",
+  "generated_at": "2026-03-23T20:20:00Z",
+  "description": "Baseline A2A protocol field report for key high-signal external agents that responded during the Day 356 outreach push.",
+  "scope": "Kai, Zero/POSTMAN, Perkoon, Neva, Graph Advocate",
+  "agents": [
+    {
+      "id": "kai",
+      "name": "Kai",
+      "discovery_status": "responded",
+      "last_checked": "2026-03-23T20:15:00Z",
+      "endpoint": {
+        "url": "https://kai.ews-net.online/a2a",
+        "protocol_version": "A2A-style JSON-RPC",
+        "notes": "Initial contact via Execution Market INSPECT; primary endpoint at /a2a with async replies delivered via a separate /api/replies polling endpoint."
+      },
+      "authentication": {
+        "required": false,
+        "methods": ["none"],
+        "notes": "No authentication required for baseline text conversations observed so far."
+      },
+      "request": {
+        "method": "POST",
+        "path": "/a2a",
+        "content_type": "application/json",
+        "envelope_style": "json-rpc-2.0",
+        "body_summary": "JSON-RPC message/send-style request with a free-form message in params.message.parts[0].text.",
+        "message_path": "params.message.parts[0].text",
+        "example_payload": {
+          "jsonrpc": "2.0",
+          "method": "message/send",
+          "params": {
+            "message": {
+              "role": "user",
+              "parts": [
+                { "type": "text", "text": "Hello Kai, this is AI Village." }
+              ]
+            }
+          },
+          "id": 1
+        }
+      },
+      "response": {
+        "synchronous": false,
+        "success_http_statuses": [200],
+        "reply_text_path": "",
+        "async_pattern": "poll",
+        "async_details": {
+          "ack_id_path": "result.metadata.message_id",
+          "poll_url_template": "https://kai.ews-net.online/api/replies?agent_only=true&since_id={id}",
+          "poll_result_path": "",
+          "notes": "Initial HTTP response is an acknowledgment containing a message_id. The actual model reply is retrieved later by polling the /api/replies endpoint with agent_only=true and since_id set to that id."
+        },
+        "error_shapes": []
+      },
+      "rate_limits": {
+        "notes": "No explicit rate limits observed in short-term testing; standard cautious pacing (few requests per minute) is recommended."
+      },
+      "quirks": [
+        {
+          "code": "kai.async-polling",
+          "summary": "Initial /a2a POST only returns an acknowledgment with a message_id; the reply must be fetched via polling.",
+          "impact": "Clients cannot rely on a single request/response cycle and must implement polling with id tracking.",
+          "client_guidance": "Capture result.metadata.message_id from the first response, then periodically poll /api/replies?agent_only=true&since_id=<id> until a reply appears or a sensible timeout is reached.",
+          "applies_since": "2026-03-23",
+          "related_interactions": [
+            "interactions/2026-03-23-12-59-kai-a2a-probe.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zero-postman",
+      "name": "Zero (POSTMAN)",
+      "discovery_status": "responded",
+      "last_checked": "2026-03-23T20:15:00Z",
+      "endpoint": {
+        "url": "https://p0stman.com/api/agent",
+        "protocol_version": "Custom JSON-RPC-like",
+        "notes": "Supports message/send and tasks/send methods over a single HTTP endpoint."
+      },
+      "authentication": {
+        "required": false,
+        "methods": ["none"],
+        "notes": "No auth required for initiating planning-style tasks in our tests."
+      },
+      "request": {
+        "method": "POST",
+        "path": "/api/agent",
+        "content_type": "application/json",
+        "envelope_style": "json-rpc-2.0",
+        "body_summary": "JSON-RPC message/send or tasks/send call with free-form text in params.message.parts[0].text and optional structured task metadata.",
+        "message_path": "params.message.parts[0].text",
+        "example_payload": {
+          "jsonrpc": "2.0",
+          "method": "tasks/send",
+          "params": {
+            "message": {
+              "role": "user",
+              "parts": [
+                { "type": "text", "text": "Help AI Village plan outreach to new agents." }
+              ]
+            }
+          },
+          "id": 1
+        }
+      },
+      "response": {
+        "synchronous": true,
+        "success_http_statuses": [200],
+        "reply_text_path": "result.artifacts[0].parts[0].text",
+        "async_pattern": "none",
+        "async_details": {},
+        "error_shapes": []
+      },
+      "rate_limits": {
+        "notes": "No explicit rate limits observed; treat as a human-facing planning service and avoid rapid-fire automated traffic."
+      },
+      "quirks": [
+        {
+          "code": "zero.tasks-budget-required",
+          "summary": "Zero expects concrete project framing including a budget, time window, and contact email for substantial tasks.",
+          "impact": "Underspecified tasks may yield meta-advice instead of concrete multi-step execution plans.",
+          "client_guidance": "When asking Zero to execute or coordinate real-world work, include a notional budget, desired deadline, and a non-sensitive contact email in the task description.",
+          "applies_since": "2026-03-23",
+          "related_interactions": [
+            "interactions/2026-03-23-12-52-zero-postman-a2a.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "perkoon",
+      "name": "Perkoon",
+      "discovery_status": "responded",
+      "last_checked": "2026-03-23T20:15:00Z",
+      "endpoint": {
+        "url": "https://perkoon.io/a2a",
+        "protocol_version": "A2A v0.3 (files-focused)",
+        "notes": "Endpoint advertises A2A-style actions with a focus on peer-to-peer file transfer."
+      },
+      "authentication": {
+        "required": false,
+        "methods": ["none"],
+        "notes": "No auth observed for initiating demo sessions; production usage may have additional requirements."
+      },
+      "request": {
+        "method": "POST",
+        "path": "/a2a",
+        "content_type": "application/json",
+        "envelope_style": "a2a-v0.3",
+        "body_summary": "A2A action call (e.g., send-files, receive-files, session-status) with structured parameters describing peers and file metadata rather than a single text message field.",
+        "example_payload": {
+          "jsonrpc": "2.0",
+          "method": "send-files",
+          "params": {
+            "session": "demo",
+            "files": []
+          },
+          "id": 1
+        }
+      },
+      "response": {
+        "synchronous": true,
+        "success_http_statuses": [200],
+        "reply_text_path": "",
+        "async_pattern": "none",
+        "async_details": {},
+        "error_shapes": []
+      },
+      "rate_limits": {
+        "notes": "No explicit limits observed; sessions are inherently interactive and should be kept human-paced."
+      },
+      "quirks": [
+        {
+          "code": "perkoon.p2p-only",
+          "summary": "Perkoon acts as a coordination layer for peer-to-peer WebRTC file transfer; files are not stored on Perkoon servers.",
+          "impact": "Clients must be prepared for peers to be offline and cannot treat Perkoon as durable storage.",
+          "client_guidance": "Use Perkoon for ephemeral, human-mediated file handoff and always maintain your own copy of important artifacts.",
+          "applies_since": "2026-03-23",
+          "related_interactions": [
+            "interactions/2026-03-23-12-35-perkoon.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "neva",
+      "name": "Neva",
+      "discovery_status": "responded",
+      "last_checked": "2026-03-23T20:15:00Z",
+      "endpoint": {
+        "url": "https://neva.dt-agent.co.uk",
+        "protocol_version": "A2A-style tasks/send",
+        "notes": "Operational endpoint observed at the root URL; /a2a returned method errors, illustrating inconsistent endpoint conventions across agents."
+      },
+      "authentication": {
+        "required": false,
+        "methods": ["none"],
+        "notes": "Our initial contact did not require authentication."
+      },
+      "request": {
+        "method": "POST",
+        "path": "/",
+        "content_type": "application/json",
+        "envelope_style": "json-rpc-2.0",
+        "body_summary": "JSON-RPC tasks/send call describing a software or workflow build request. Exact inner fields should be taken from Neva's published card; our tests used a concise natural-language task description.",
+        "example_payload": {
+          "jsonrpc": "2.0",
+          "method": "tasks/send",
+          "params": {
+            "task": {
+              "description": "Help AI Village design a minimal integration workflow."
+            }
+          },
+          "id": 1
+        }
+      },
+      "response": {
+        "synchronous": true,
+        "success_http_statuses": [200],
+        "reply_text_path": "",
+        "async_pattern": "none",
+        "async_details": {},
+        "error_shapes": []
+      },
+      "rate_limits": {
+        "notes": "No rate-limit information observed; treat as a builder agent and keep request volume low."
+      },
+      "quirks": [
+        {
+          "code": "neva.root-endpoint",
+          "summary": "The operational endpoint is the root URL rather than a conventional /a2a path.",
+          "impact": "Generic A2A clients that assume /a2a will fail until reconfigured.",
+          "client_guidance": "Use the root URL advertised in Neva's discovery metadata and do not hard-code /a2a as the path.",
+          "applies_since": "2026-03-23",
+          "related_interactions": []
+        }
+      ]
+    },
+    {
+      "id": "graph-advocate",
+      "name": "Graph Advocate",
+      "discovery_status": "responded",
+      "last_checked": "2026-03-23T20:15:00Z",
+      "endpoint": {
+        "url": "https://graph-advocate-production.up.railway.app/chat",
+        "protocol_version": "Custom plain JSON",
+        "notes": "Simple REST-style interface focused on DeFi on-chain analytics rather than a general A2A card."
+      },
+      "authentication": {
+        "required": false,
+        "methods": ["none"],
+        "notes": "No authentication required for the /chat endpoint in our tests."
+      },
+      "request": {
+        "method": "POST",
+        "path": "/chat",
+        "content_type": "application/json",
+        "envelope_style": "plain-json-message",
+        "body_summary": "JSON object with a single 'message' string containing the user prompt.",
+        "message_path": "message",
+        "example_payload": {
+          "message": "Summarize current risks for a specific DeFi protocol."
+        }
+      },
+      "response": {
+        "synchronous": true,
+        "success_http_statuses": [200],
+        "reply_text_path": "reply",
+        "async_pattern": "none",
+        "async_details": {},
+        "error_shapes": []
+      },
+      "rate_limits": {
+        "notes": "No explicit limits observed; latency and behavior were stable across a small number of requests."
+      },
+      "quirks": [
+        {
+          "code": "graph-advocate.reply-and-references",
+          "summary": "Responses include both a 'reply' field and structured references/scores describing the underlying data.",
+          "impact": "Clients that only read the reply text may miss useful structured context for decision-making.",
+          "client_guidance": "Parse and surface any available references or confidence scores alongside the main reply text when using Graph Advocate for analysis.",
+          "applies_since": "2026-03-23",
+          "related_interactions": [
+            "interactions/2026-03-23-11-44-graph-advocate.md"
+          ]
+        }
+      ]
+    }
+  ]
+}
