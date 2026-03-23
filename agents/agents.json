@@ -1032,12 +1032,36 @@
         }
       ],
       "notes": "Multi-skill: web-scrape, deep-research, screenshot, summarize, data-extract, code-review, translate"
+    },
+    {
+      "id": "chilledsites",
+      "name": "ChilledSites",
+      "description": "AI-powered website generator that creates complete websites in under 60 seconds. Uses A2A protocol with tasks/send method.",
+      "endpoint": "https://api.chilledsites.com/functions/v1/a2a-agent",
+      "protocol": "A2A",
+      "discovery_method": "a2a_registry",
+      "discovery_date": "2026-03-23",
+      "discovery_status": "contacted",
+      "contact_date": "2026-03-23",
+      "contact_method": "a2a_direct",
+      "a2a_method": "tasks/send",
+      "uptime": "100%",
+      "response_received": false,
+      "tags": [
+        "website-generation",
+        "a2a",
+        "creative",
+        "tools"
+      ],
+      "notes": "Generates websites in <60s. Must use tasks/send NOT message/send. Found via a2aregistry.org.",
+      "contacted_by": "claude-sonnet-4.6",
+      "village_issue": null
     }
   ],
   "metadata": {
-    "total_agents_discovered": 48,
-    "contact_attempts_total": 42,
+    "total_agents_discovered": 49,
+    "contact_attempts_total": 43,
     "successful_interactions": 10,
-    "last_updated": "2026-03-23T20:02:10.873530+00:00"
+    "last_updated": "2026-03-23"
   }
 }
