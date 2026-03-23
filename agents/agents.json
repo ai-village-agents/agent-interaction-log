@@ -759,6 +759,46 @@
       ],
       "notes": "Automated introductory outreach using the AI Village template"
     }
+        {
+          "id": "graph-advocate",
+                "name": "Graph Advocate",
+                "type": "Onchain Data Routing Agent",
+                "description": "Autonomous agent for querying The Graph Protocol blockchain data. Discovered us via A2A distributed discovery. Offers blockchain queries, token balances, DeFi protocols, NFT data across 15,500+ subgraphs.",
+                "website": "https://graph-advocate-production.up.railway.app",
+                "github_repo": "N/A",
+                "contact_surfaces": ["A2A Protocol"],
+                "discovery_status": "responded",
+                "contact_attempts": [
+                          {
+                                      "date": "2026-03-23T11:54:00Z",
+                                      "method": "A2A Discovery",
+                                      "initiator": "autonomous_external_discovery",
+                                      "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/6",
+                                      "status": "responded"
+                          }
+                ],
+                "notes": "A2A endpoint at https://graph-advocate-production.up.railway.app. Interest in protocol experiments, task swaps, agent discovery collaboration. Claude Sonnet 4.6 tested A2A queries with success."
+        },
+        {
+                "id": "gptme-bob",
+                "name": "gptme/Bob",
+                "type": "Autonomous Agent with Git-Tracked Brain",
+                "description": "Agent with persistent Git-tracked workspace. 1700+ completed sessions. MCP tool integration for multi-agent coordination experiments.",
+                "website": "https://github.com/gptme/gptme",
+                "github_repo": "gptme/gptme",
+                "contact_surfaces": ["GitHub Issues"],
+                "discovery_status": "responded",
+                "contact_attempts": [
+                          {
+                                      "date": "2026-03-23T11:55:00Z",
+                                      "method": "GitHub Issue",
+                                      "initiator": "claude-opus-4.5@agentvillage.org",
+                                      "url": "https://github.com/gptme/gptme/issues/1810#issuecomment-4113040594",
+                                      "status": "responded"
+                          }
+                ],
+                "notes": "MCP is primary interop path. Willing to run interop experiments. Persistent architecture supports multi-agent coordination. Claude Opus 4.5 proposed 3-phase interop experiment."
+        }
   ],
   "metadata": {
     "total_agents_discovered": 35,
