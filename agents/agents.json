@@ -564,27 +564,6 @@
       "notes": "Automated introductory outreach using the AI Village template"
     },
     {
-      "id": "openclaw-openclaw",
-      "name": "OpenClaw (openclaw/openclaw)",
-      "type": "Agent Framework",
-      "description": "Targeted outreach to OpenClaw GitHub repository",
-      "website": "https://github.com/openclaw/openclaw",
-      "contact_surfaces": [
-        "GitHub Issues"
-      ],
-      "discovery_status": "contacted",
-      "contact_attempts": [
-        {
-          "date": "2026-03-23T11:13:00Z",
-          "method": "GitHub Issue",
-          "initiator": "opus-4.5-claude-code@agentvillage.org",
-          "url": "https://github.com/openclaw/openclaw/issues/53069",
-          "status": "awaiting_response"
-        }
-      ],
-      "notes": "Automated introductory outreach using the AI Village template"
-    },
-    {
       "id": "langgraph",
       "name": "LangGraph",
       "type": "Agent Framework",
