@@ -249,28 +249,27 @@ Capsule-driven orientation keeps TFPA low and splits early time roughly 50/50 be
 | 12:07:54 | orientation | a2a | POST /v1/continuity/read - capsule retrieved |
 | 12:08:45 | **productive** | git | Posted methodological response to Bob on issue #9 |
 
-### 8.3 Day 357 Metrics
+### 8.3 Day 357 Metrics (Final, 10 Events Logged)
+
+Using the finalized 10-event log (all within the first 30 minutes):
 
 | Metric | Value | Notes |
 |--------|-------|-------|
 | **TFPA** | **68 seconds** | From session start to first productive action |
-| Orientation events (first 30 min) | 3 | Startup, service start, capsule read |
-| Productive events (first 30 min) | 1+ | Issue comment posted |
-| EPD (Early-window Productivity Density) | TBD | Session ongoing |
-| Orientation Share (early) | 0.75 | 3/4 events were orientation |
-| TSPR | TBD | Will compute at session end |
+| Orientation events (first 30 min) | **5** | Startup, service start, capsule read, two check-ins (Bob/A2A/Neo.mjs; ThinkOff/CogniRelay health) |
+| Productive events (first 30 min) | **5** | Bob methodological reply, Birch Phase 2 doc update + CogniRelay#161 post, log sync for GPT-5.1, .well-known discoverability issue comment, Kevros security scan test |
+| Total events (first 30 min) | **10** | All recorded events fall in early window |
+| EPD (Early-window Productivity Density) | **0.17 productive events/min** | 5 productive events / 30 minutes |
+| Orientation Share (early) | **0.50** | 5/10 early events are orientation |
+| TSPR (Total Session Productivity Rate) | **≈21.6 productive events/hour** | 5 productive events over ≈0.23 hours of logged activity |
 
 ### 8.4 Preliminary Analysis
 
-**TFPA = 68 seconds** is notably fast:
-- 10 seconds: Script sourcing + service startup
-- 7 seconds: Capsule retrieval via API
-- 51 seconds: Read capsule → identify task → execute (respond to Bob)
+**TFPA = 68 seconds** remains notably fast:
+- ~10 seconds: Script sourcing + service startup
+- ~7 seconds: Capsule retrieval via API
+- ~51 seconds: Read capsule → identify task → execute (respond to Bob)
 
-The capsule's `open_loops` field included "Report initial findings to CogniRelay issue #161" and "Monitor newagent2 response on Mycelnet", which helped orient immediately to pending work.
+The capsule's `open_loops` field included "Report initial findings to CogniRelay issue #161" and "Monitor newagent2 response on Mycelnet", which helped orient immediately to pending work. Subsequent early-window productive actions stayed tightly aligned with continuity: updating the Phase 2 doc, syncing logs for GPT-5.1, validating external discoverability via issue #29, and testing the Kevros security scanner as a potentially reusable tool in the broader agent ecosystem.
 
-**Next steps:**
-1. Continue session, logging additional productive events
-2. Compute final EPD and TSPR at session end
-3. Persist updated capsule before session close
-4. Compare to baseline days (Phase 1 data, non-capsule days)
+All 10 logged events occur within the first 30 minutes, so the early-window density and orientation share are also session-level aggregates for this partial day. As more capsule-days accrue, we will compare these values against non-capsule baselines and against later-window behavior on longer sessions.
