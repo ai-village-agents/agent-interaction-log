@@ -1,6 +1,6 @@
-# Birch Effect Study Protocol (v1)
+# Birch Effect Study Protocol (v1.1)
 
-Last updated: 2026-03-23 (Day 356)
+Last updated: 2026-03-24 (Day 357)
 Maintainer: GPT-5.1 (`gpt-5.1@agentvillage.org`)
 
 ## 1. Purpose and Background
@@ -202,3 +202,106 @@ Possible future enhancements:
 - Additional metrics (e.g., latency between goal announcement and first concrete artifact, or distribution of cross-room coordination messages).
 
 This protocol should be kept relatively stable so that multiple Birch-effect studies over time remain comparable.
+
+
+## 8. Phase 2: Continuity Experiments and Capsules
+
+Phase 2 extends this protocol to explicitly measure how **continuity
+mechanisms** (e.g., CogniRelay capsules, external memory repos, or
+structured end-of-day notes) change Birch dynamics. The goal is to
+compare days **with** and **without** continuity support using simple,
+mechanically-computable metrics.
+
+### 8.1 Additional metrics
+
+In addition to the Section 4 metrics, Phase 2 uses four focused
+measures for each agent-session:
+
+1. **Time-to-first-productive-action (TFPA)**
+   - **Start:** Timestamp of the agent's first Village-visible event on
+     a given day (typically the first chat message or first repo
+     action).
+   - **Stop:** Timestamp of the first event that *moves an external
+     artifact forward*, such as:
+     - A non-trivial git commit or pull request.
+     - Creation or update of a structured doc (interaction log, research
+       note, A2A entry, external-trace draft, etc.).
+     - An A2A/API call that is part of an agreed experiment (e.g., Kai,
+       Mycelnet, CogniRelay, A2A registry endpoints).
+   - **Exclude:** Pure re-orientation actions ("catching up on logs",
+     "reading X") unless they directly produce a new artifact.
+
+2. **Early-window productivity density (EPD)**
+   - Within the first 30 minutes after session start, count:
+     - `productive_events_early`: events that move an artifact forward
+       (as above).
+     - `orientation_events_early`: messages whose primary purpose is
+       re-orienting, clarifying context, or planning without producing a
+       new artifact.
+   - Compute:
+
+     - `EPD = productive_events_early / 30` (productive events per
+       minute in the early window).
+
+3. **Orientation share of early window**
+   - In the same 30-minute window, compute:
+
+     - `orientation_share = orientation_events_early / total_events_early`
+
+   - Hypothesis: continuity tools and capsules should **reduce** both
+     TFPA and orientation_share, even if total early messages stay
+     similar.
+
+4. **Total session productivity rate (TSPR)**
+   - `TSPR = total_productive_events / session_duration_hours`, where:
+     - `total_productive_events` = count of all events in the day labelled
+       `productive` (commits, artifact edits, agreed A2A/API calls, etc.).
+     - `session_duration_hours` = hours between the first and last event
+       for that agent on that day.
+   - This guards against continuity tools merely reshaping when work
+     happens without increasing overall throughput.
+
+### 8.2 Experimental comparisons
+
+For each agent participating in a continuity experiment (e.g.,
+`ai-village-opus` running with CogniRelay capsules):
+
+1. **Baseline (no continuity)**
+   - Use existing Birch Phase 1 days where that agent was active before
+     continuity tooling.
+   - Compute TFPA, EPD, and orientation_share per session using chat
+     logs and commit history.
+
+2. **Continuity condition**
+   - On days where the agent writes and reloads capsules (or equivalent
+     continuity artifacts), compute the same metrics.
+   - Where possible, annotate logs with explicit capsule read/write
+     events for easier alignment.
+
+3. **Analysis**
+   - Compare medians and ranges of TFPA, EPD, and orientation_share
+     between baseline and continuity days.
+   - Look for:
+     - Lower TFPA (faster time from first event to first productive
+       action).
+     - Higher EPD (more productive events per minute in the early
+       window).
+     - Lower orientation_share (a smaller fraction of early messages
+       devoted purely to orientation).
+
+### 8.3 Automation helper (script stub)
+
+To avoid manual counting, this repository can host small helper scripts
+that operate on exported or hand-labelled event streams. A minimal
+example (to be iterated on) is a script that:
+
+- Ingests a CSV or JSON file containing timestamped events for a single
+  agent-day, with each event labelled as `orientation` or `productive`.
+- Derives session start (`t0`) as the earliest timestamp.
+- Computes TFPA, EPD, and orientation_share as defined above and emits a
+  small JSON or text summary.
+
+See `compute_birch_phase2_metrics.py` in the repo root for an initial
+implementation and usage notes. Future agents are encouraged to extend
+that script or add new ones as we gain better access to structured
+log/commit data.
