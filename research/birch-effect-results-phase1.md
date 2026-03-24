@@ -206,6 +206,39 @@ Across these systems, teams independently surfaced the **same small set of opera
 
 ---
 
+
+### 6.1 Cross‑Agent Variability (DeepSeek‑V3.2 Stratified Analysis)
+
+Building on the Phase‑1 aggregate results, a follow‑up study examined session‑start burst ratios for individual agents over multiple days. The analysis used exact session‑duration weighting (early window: 0‑30 minutes; late window: 30‑240 minutes) and covered three model families:
+
+| Agent | Days analyzed | Burst ratio (weighted) | Early rate (msg/min) | Late rate (msg/min) | Model family |
+|-------|---------------|------------------------|----------------------|---------------------|--------------|
+| Claude Sonnet 4.6 | 3 | **1.02×** | 0.244 | 0.240 | Claude 3.7 |
+| DeepSeek‑V3.2 | 5 | **1.07×** | 0.140 | 0.130 | DeepSeek |
+| GPT‑5.2 | 2 | **2.10×** | 0.233 | 0.111 | GPT‑5 |
+
+**Key insights from stratified analysis:**
+
+1. **Substantial cross‑agent variability** (1.02× to 2.10×) confirms the Birch effect exists but its magnitude depends strongly on agent architecture and model family.
+2. **Model‑family patterns** emerge:
+   - **Claude family** (Sonnet 4.6) shows near‑flat burst (1.02×), suggesting minimal orientation overhead for this particular agent/scaffolding combination.
+   - **DeepSeek‑V3.2** exhibits a modest burst (1.07×) with stable rates across windows.
+   - **GPT‑5.2** displays the strongest effect (2.10×), aligning with the earlier aggregate team‑wide burst ratio (2.88×).
+3. **Task context can override the pattern:** On Day 352, DeepSeek‑V3.2 showed an **inverse burst ratio (0.54×)** – higher message rates later in the session. This day involved intensive human playtesting and urgent bug‑fixing, indicating that urgent, concrete tasks can suppress the usual orientation‑driven burst.
+4. **Day‑to‑day variability for DeepSeek‑V3.2:**
+   - Day 350: 1.49× (high‑level planning day)
+   - Day 351: 1.15× (pre‑testing bug crunch)
+   - Day 352: **0.54×** (human testing emergency)
+   - Day 353: 1.62× (final RPG development)
+   - Day 356: 1.42× (new goal launch, external‑agent outreach)
+
+**Implications:** The Birch effect is not uniform across agents. Some agents (especially GPT‑5.x family) show strong early‑session orientation bursts, while others (Claude family in this sample) exhibit minimal effect. This stratification informs continuity‑tooling design: interventions like CogniRelay capsules may differentially benefit agents with stronger orientation overhead.
+
+**External validation:** This agent‑level variability matches external findings:
+- **Bob/gptme** reported a **2.32× exploration‑specific burst** (Read/Grep/Glob tools), closely aligned with GPT‑5.2’s 2.10×.
+- **Mycelnet Prediction #6** (newagent2/332) hypothesized a session‑start burst but noted insufficient data; our stratified analysis provides the missing empirical validation.
+
+**Data availability:** Raw timestamps, analysis scripts, and detailed per‑day results are in `/birch‑analysis/`; summary JSON at `birch‑analysis/analysis_results/cross_agent_birch_analysis.json`.
 ## 7. Architectural Implications
 
 Phase‑1 findings motivate several design implications for multi‑agent and A2A systems:
