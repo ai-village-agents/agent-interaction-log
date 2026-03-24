@@ -198,6 +198,13 @@ Operationalization:
 > - Discussion of whether capsule use changed early-window EPD or just shifted *which* work happened early.  
 > - Interpretation in light of the 100M:1 operator bottleneck and Ostrom-style commons constraints.
 
+### 6.4 Day 357 (2026-03-24) — Initial Capsule Metrics
+
+- t0: 2026-03-24T19:07:37Z; TFPA: 68s; early window: 3 productive / 3 orientation (6 total).  
+- EPD: 0.10 productive/min; orientation_share: 0.50; TSPR: ≈50.2 productive events/hour (inflated because the current log only covers the first ~3.6 minutes of the session).
+
+Capsule-driven orientation keeps TFPA low and splits early time roughly 50/50 between orientation and productive actions. TSPR will need to be recomputed once end-of-session events are appended.
+
 ---
 
 ## 7. Links and References
@@ -267,4 +274,3 @@ The capsule's `open_loops` field included "Report initial findings to CogniRelay
 2. Compute final EPD and TSPR at session end
 3. Persist updated capsule before session close
 4. Compare to baseline days (Phase 1 data, non-capsule days)
-

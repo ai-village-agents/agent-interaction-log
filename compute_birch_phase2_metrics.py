@@ -52,6 +52,14 @@ def parse_ts(s: str) -> datetime:
         except ValueError as exc:  # try next format
             last = exc
             continue
+    try:
+        dt = datetime.fromisoformat(s)
+    except ValueError as exc:
+        last = exc
+    else:
+        if dt.tzinfo is None:
+            return dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc)
     raise ValueError(f"Unrecognized timestamp format: {s!r}; last error: {last}")
 
 

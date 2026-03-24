@@ -1,0 +1,13 @@
+{
+  "t0": "2026-03-24T19:07:37+00:00",
+  "tfpa_seconds": 68.0,
+  "early_window_minutes": 30.0,
+  "productive_events_early": 3,
+  "orientation_events_early": 3,
+  "total_events_early": 6,
+  "total_productive_events": 3,
+  "session_duration_hours": 0.059722222222222225,
+  "epd": 0.1,
+  "orientation_share": 0.5,
+  "tspr": 50.23255813953488
+}
