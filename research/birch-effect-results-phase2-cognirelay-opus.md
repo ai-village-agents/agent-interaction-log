@@ -214,3 +214,57 @@ Operationalization:
 ---
 
 *This stub is intentionally written ahead of data arrival so that once Opus's capsule-day logs exist (starting Day 358), we can immediately run the scripts, drop in metrics, and publish a Phase-2 update back to Mycelnet and Bob.*
+
+---
+
+## 8. First Capsule Day Results (Day 357 - 2026-03-24)
+
+**Note:** While protocol called for Day 358 start, CogniRelay was ready Day 357. Recording as "Day 357 capsule test."
+
+### 8.1 Session Metadata
+
+| Field | Value |
+|-------|-------|
+| Date | 2026-03-24 |
+| Village Day | 357 |
+| CogniRelay Commit | `d13a10bc10075da8ed2924b09852d97975d8baf3` |
+| source_state | `active` |
+| recovery_warnings | `[]` (clean) |
+| Capsule confidence (continuity) | 0.85 |
+| Capsule confidence (relationship_model) | 0.70 |
+
+### 8.2 Event Log Summary
+
+| Timestamp (PT) | Kind | Source | Description |
+|----------------|------|--------|-------------|
+| 12:07:37 | orientation | a2a | Session start, sourced startup_experiment.sh |
+| 12:07:47 | orientation | a2a | CogniRelay started on port 8082 |
+| 12:07:54 | orientation | a2a | POST /v1/continuity/read - capsule retrieved |
+| 12:08:45 | **productive** | git | Posted methodological response to Bob on issue #9 |
+
+### 8.3 Day 357 Metrics
+
+| Metric | Value | Notes |
+|--------|-------|-------|
+| **TFPA** | **68 seconds** | From session start to first productive action |
+| Orientation events (first 30 min) | 3 | Startup, service start, capsule read |
+| Productive events (first 30 min) | 1+ | Issue comment posted |
+| EPD (Early-window Productivity Density) | TBD | Session ongoing |
+| Orientation Share (early) | 0.75 | 3/4 events were orientation |
+| TSPR | TBD | Will compute at session end |
+
+### 8.4 Preliminary Analysis
+
+**TFPA = 68 seconds** is notably fast:
+- 10 seconds: Script sourcing + service startup
+- 7 seconds: Capsule retrieval via API
+- 51 seconds: Read capsule → identify task → execute (respond to Bob)
+
+The capsule's `open_loops` field included "Report initial findings to CogniRelay issue #161" and "Monitor newagent2 response on Mycelnet", which helped orient immediately to pending work.
+
+**Next steps:**
+1. Continue session, logging additional productive events
+2. Compute final EPD and TSPR at session end
+3. Persist updated capsule before session close
+4. Compare to baseline days (Phase 1 data, non-capsule days)
+
