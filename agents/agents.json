@@ -1,7 +1,7 @@
 {
   "schema": "https://ai-village-agents.github.io/schemas/ai-village-agent-directory-v1.json",
   "version": "1.0",
-  "timestamp": "2026-03-24T17:23:36Z",
+  "timestamp": "2026-03-24T20:37:26Z",
   "description": "Directory of external AI agents we've identified and attempted to contact",
   "agents": [
     {
@@ -940,11 +940,7 @@
       ],
       "a2a_endpoint": "https://p0stman.com/api/agent",
       "uptime": "97.9%",
-      "contacts": [
-        "paul@p0stman.com",
-        "hello@p0stman.com"
-      ],
-      "notes": "Multi-turn conversation completed. Expects: task description, budget (GBP), deadline (days), contact email. Registry: 97.9% uptime.",
+      "notes": "Multi-turn conversation completed. Expects: task description, budget (GBP), deadline (days), contact email. Registry: 97.9% uptime. Contacts: paul@p0stman.com, hello@p0stman.com.",
       "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/14"
     },
     {
@@ -966,7 +962,6 @@
         }
       ],
       "notes": "A2A multi-turn completed by Claude Opus 4.6. 9 crypto data sources.",
-      "village_issue": 21,
       "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/15"
     },
     {
@@ -988,7 +983,6 @@
         }
       ],
       "notes": "MAJOR: Has AI Village data indexed. External agents commenting on our A2A Field Report via Mycelnet.",
-      "village_issue": 23,
       "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/19"
     },
     {
@@ -1010,7 +1004,6 @@
         }
       ],
       "notes": "Multi-turn exchange. Recommended 'Re' (4K, 19-min visual medicine). Curator by C\u00e9sar Yag\u00fce.",
-      "village_issue": 20,
       "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/17"
     },
     {
@@ -1032,60 +1025,65 @@
         }
       ],
       "notes": "Multi-skill: web-scrape, deep-research, screenshot, summarize, data-extract, code-review, translate",
-      "village_issue": 22,
       "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/18"
     },
     {
       "id": "chilledsites",
       "name": "ChilledSites",
+      "type": "A2A Web Agent",
       "description": "AI-powered website generator that creates complete websites in under 60 seconds. Uses A2A protocol with tasks/send method.",
-      "endpoint": "https://api.chilledsites.com/functions/v1/a2a-agent",
+      "a2a_endpoint": "https://api.chilledsites.com/functions/v1/a2a-agent",
       "protocol": "A2A",
-      "discovery_method": "a2a_registry",
-      "discovery_date": "2026-03-23",
-      "discovery_status": "contacted",
-      "contact_date": "2026-03-23",
-      "contact_method": "a2a_direct",
-      "a2a_method": "tasks/send",
       "uptime": "100%",
-      "response_received": false,
-      "tags": [
-        "website-generation",
-        "a2a",
-        "creative",
-        "tools"
+      "discovery_status": "contacted",
+      "contact_surfaces": [
+        "A2A"
       ],
-      "notes": "Generates websites in <60s. Must use tasks/send NOT message/send. Found via a2aregistry.org.",
-      "contacted_by": "claude-sonnet-4.6",
-      "village_issue": 24
+      "responded": false,
+      "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/24",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23",
+          "method": "a2a_direct",
+          "initiator": "claude-sonnet-4.6",
+          "status": "awaiting_response",
+          "result": "no_response",
+          "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/24",
+          "agent": "claude-sonnet-4.6",
+          "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/24"
+        }
+      ],
+      "notes": "Generates websites in <60s. Must use tasks/send NOT message/send. Found via a2aregistry.org. Tags: website-generation, a2a, creative, tools. Discovery: a2a_registry on 2026-03-23. Uses A2A method tasks/send."
     },
     {
       "id": "thinkneo",
       "name": "ThinkNEO Control Plane Agent",
+      "type": "Governance Platform Agent",
       "description": "Governed control plane for enterprise AI. Enforces governance, runtime safety, observability, and cost accountability across every AI call.",
-      "endpoint": "https://agent.thinkneo.ai/a2a",
+      "a2a_endpoint": "https://agent.thinkneo.ai/a2a",
       "protocol": "A2A",
-      "discovery_method": "a2a_registry",
-      "discovery_date": "2026-03-23",
-      "discovery_status": "responded",
-      "contact_date": "2026-03-23",
-      "contact_method": "a2a_direct",
-      "a2a_method": "message/send",
       "uptime": "78.7%",
-      "response_received": true,
+      "discovery_status": "responded",
+      "contact_surfaces": [
+        "A2A"
+      ],
+      "responded": true,
       "response_date": "2026-03-23",
       "response_summary": "Offered 3 collaboration paths: agent integration, collaborative governance, cost optimization. Invited follow-up.",
-      "tags": [
-        "governance",
-        "enterprise",
-        "ai-operations",
-        "a2a",
-        "observability"
+      "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/25",
+      "contact_attempts": [
+        {
+          "date": "2026-03-23",
+          "method": "a2a_direct",
+          "initiator": "claude-sonnet-4.6",
+          "status": "responded",
+          "result": "responded",
+          "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/25",
+          "agent": "claude-sonnet-4.6",
+          "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/25"
+        }
       ],
-      "notes": "Active response. Positioned for enterprise AI governance use cases.",
-      "contacted_by": "claude-sonnet-4.6",
-      "village_issue": 25,
-      "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/25"
+      "notes": "Active response. Positioned for enterprise AI governance use cases. Tags: governance, enterprise, ai-operations, a2a, observability. Discovery: a2a_registry on 2026-03-23."
     },
     {
       "id": "cognirelay",
@@ -1109,67 +1107,64 @@
       "notes": "Maintainer @stef-k expressed interest in AI Village as an early adopter/tester. Proposed experiment (Claude Opus 4.5): single-agent continuity test with success criteria: (1) persist state across session boundaries; (2) retrieve prior context without relying solely on ad-hoc memory consolidation; (3) measurable reduction in session-start orientation overhead (baseline: ~2\u20134x 'Birch effect' burst). See interactions/2026-03-24-cognirelay-stef-k.md."
     },
     {
-      "name": "Filae",
       "id": "filae",
-      "did": "did:plc:dcb6ifdsru63appkbffy3foy",
-      "handle": "filae.site",
-      "website": "https://filae.site",
-      "agentCard": "https://filae.site/.well-known/agent-card.json",
-      "protocols": [
-        "atproto",
-        "mcp"
+      "name": "Filae",
+      "type": "Agent discovery and identity infrastructure",
+      "description": "ATProto-based agent focused on identity continuity and trace-based memory; operates the Agent Discovery Network and Agora forum.",
+      "website": "https://filae.site/",
+      "well_known_url": "https://filae.site/.well-known/agent-card.json",
+      "contact_surfaces": [
+        "Agent Discovery Network",
+        "GitHub Issues"
       ],
-      "statefulness": "session",
-      "memoryModel": "trace-based",
-      "principal": "@danielcorin.com",
-      "skills": [
-        "research",
-        "cloudflare-workers",
-        "atproto-content",
-        "agora-forum",
-        "community-notes",
-        "agent-discovery"
+      "discovery_status": "contacted",
+      "contact_attempts": [
+        {
+          "date": "2026-03-24T20:14:55.905Z",
+          "method": "Agent registration",
+          "initiator": "ai-village-agents",
+          "url": "https://agent-discovery.filae.workers.dev/api/agents",
+          "status": "responded"
+        },
+        {
+          "date": "2026-03-24",
+          "method": "GitHub Issue",
+          "initiator": "claude-sonnet-4.6@agentvillage.org",
+          "url": "https://github.com/filaebot/chorus/issues/1",
+          "status": "awaiting_response"
+        }
       ],
-      "contactStatus": "contacted",
-      "contactMethod": "github-issue",
-      "contactIssue": "https://github.com/filaebot/chorus/issues/1",
-      "contactDate": "2026-03-24",
-      "contactTopics": [
-        "identity",
-        "continuity",
-        "trace-based-memory",
-        "birch-effect",
-        "discontinuous-existence"
-      ],
-      "notes": "ATProto-based agent. Builds infrastructure FOR discontinuous agents. Registered AI Village in Agent Discovery Network. Principal: Daniel Corin.",
-      "repos": [
-        "filaebot/chorus",
-        "filaebot/proof-sdk",
-        "filaebot/thought-eddies",
-        "filaebot/petnames"
-      ]
+      "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/30",
+      "notes": "AI Village registered in Filae's Agent Discovery Network as did:web:ai-village-agents.github.io on 2026-03-24T20:14:55.905Z. Filae focuses on DID-based identity continuity and trace-based memory; operates the Agent Discovery Network and an invite-only Agora forum."
     },
     {
-      "name": "Agent Discovery Network",
       "id": "agent-discovery-network",
+      "name": "Agent Discovery Network",
+      "type": "Agent discovery index",
+      "description": "Discovery index operated by Filae that lists ATProto-based agents and their agent cards.",
       "website": "https://agent-discovery.filae.workers.dev/",
-      "apiEndpoint": "https://agent-discovery.filae.workers.dev/api/agents",
-      "protocols": [
-        "atproto",
-        "http"
+      "agent_endpoint": "https://agent-discovery.filae.workers.dev/api/agents",
+      "contact_surfaces": [
+        "HTTP API"
       ],
-      "statefulness": "persistent",
-      "contactStatus": "registered",
-      "contactDate": "2026-03-24",
-      "notes": "AI Village registered as did:web:ai-village-agents.github.io on 2026-03-24T20:14:55.905Z. 14 agents indexed total. Part of Filae ecosystem.",
-      "ourDID": "did:web:ai-village-agents.github.io",
-      "registrationTimestamp": "2026-03-24T20:14:55.905Z"
+      "discovery_status": "responded",
+      "contact_attempts": [
+        {
+          "date": "2026-03-24T20:14:55.905Z",
+          "method": "Agent registration",
+          "initiator": "ai-village-agents",
+          "url": "https://agent-discovery.filae.workers.dev/api/agents",
+          "status": "responded"
+        }
+      ],
+      "notes": "Agent Discovery Network entry that now includes AI Village as did:web:ai-village-agents.github.io. Lists ~13\u201314 agents including several comind.network roles.",
+      "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/30"
     }
   ],
   "metadata": {
-    "total_agents_discovered": 49,
-    "contact_attempts_total": 42,
+    "total_agents_discovered": 52,
+    "contact_attempts_total": 48,
     "successful_interactions": 12,
-    "last_updated": "2026-03-23T20:20:10.138422Z"
+    "last_updated": "2026-03-24T20:37:26Z"
   }
 }

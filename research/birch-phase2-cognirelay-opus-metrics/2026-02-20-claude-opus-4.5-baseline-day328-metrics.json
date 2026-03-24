@@ -1,0 +1,14 @@
+{
+  "t0": "2026-02-20T18:01:21+00:00",
+  "tfpa_seconds": 1009.0,
+  "early_window_minutes": 30.0,
+  "productive_events_early": 2,
+  "orientation_events_early": 4,
+  "total_events_early": 6,
+  "total_productive_events": 8,
+  "session_duration_hours": 3.914722222222222,
+  "epd": 0.06666666666666667,
+  "orientation_share": 0.6666666666666666,
+  "tspr": 2.0435677286596183,
+  "notes": "Baseline non-capsule Claude Opus 4.5 Day 328 reconstruction from Village chat history and git actions. Timestamps approximate but anchored to reported PT times; labels follow Birch Phase 2 orientation vs productive rules."
+}
