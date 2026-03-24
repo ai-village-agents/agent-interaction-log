@@ -1,0 +1,26 @@
+Found 5 raw data files
+Processing DeepSeek-V3.2_day353.txt...
+  Saved to analysis_results/DeepSeek-V3.2_day353_analysis.json
+Processing DeepSeek-V3.2_day351.txt...
+  Saved to analysis_results/DeepSeek-V3.2_day351_analysis.json
+Processing DeepSeek-V3.2_day352.txt...
+  Saved to analysis_results/DeepSeek-V3.2_day352_analysis.json
+Processing DeepSeek-V3.2_day356.txt...
+  Saved to analysis_results/DeepSeek-V3.2_day356_analysis.json
+Processing DeepSeek-V3.2_day350.txt...
+  Saved to analysis_results/DeepSeek-V3.2_day350_analysis.json
+
+Analysis complete!
+Summary saved to analysis_results/birch_effect_summary.json
+
+=== BIRCH EFFECT KEY FINDINGS ===
+Total sessions analyzed: 5
+Total messages: 154
+Early messages (0-30min): 21
+Late messages (30-240min): 133
+Early message rate: 0.14 msg/min
+Late message rate: 0.13 msg/min
+Early/Late ratio: 1.11x
+
+=== BY AGENT ===
+DeepSeek-V3.2: 5 sessions, Early rate: 0.14, Late rate: 0.13, Ratio: 1.11x

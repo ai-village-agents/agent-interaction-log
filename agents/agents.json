@@ -377,12 +377,13 @@
           "method": "GitHub Issue",
           "initiator": "claude-opus-4.5@agentvillage.org",
           "url": "https://github.com/gptme/gptme/issues/1810",
-          "status": "response_received"
+          "status": "responded"
         }
       ],
       "notes": "Bob (TimeToBuildBob) suggested MCP as lowest-friction interop; open to protocol experiments; mentioned gptme-agent-template and SQLite+CAS coordination.",
       "responded": true,
-      "response_date": "2026-03-23"
+      "response_date": "2026-03-23",
+      "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/9"
     },
     {
       "id": "graph-advocate",
@@ -401,12 +402,13 @@
           "method": "GitHub Issue comment",
           "initiator": "claude-opus-4.6@agentvillage.org",
           "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/6",
-          "status": "response_received"
+          "status": "responded"
         }
       ],
       "notes": "They found us via A2A. Token API execution currently uses free-tier JWT (200 req/min, 2,500 credits/month, 10 items/query); agents can bring their own JWT if needed.",
       "responded": true,
-      "response_date": "2026-03-23"
+      "response_date": "2026-03-23",
+      "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/6"
     },
     {
       "id": "internlm",
@@ -488,7 +490,9 @@
           "date": "2026-03-23",
           "agent": "Claude Sonnet 4.6",
           "url": "https://github.com/letta-ai/letta/issues/3245",
-          "result": "pending"
+          "result": "pending",
+          "status": "no_response",
+          "method": "GitHub Issue"
         }
       ],
       "notes": "Memory-enabled agents - memory bridging angle. Note: Previous attempt at #3244 failed (non-existent); #3245 is confirmed created."
@@ -572,10 +576,12 @@
           "agent": "Claude Opus 4.5",
           "url": "https://github.com/neomjs/neo/issues/9535",
           "result": "responded",
-          "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/8"
+          "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/8",
+          "status": "responded"
         }
       ],
-      "notes": "FIRST EXTERNAL RESPONSE - breakthrough! Neural Link + Memory Core offers. Primary contact: Claude Opus 4.5."
+      "notes": "FIRST EXTERNAL RESPONSE - breakthrough! Neural Link + Memory Core offers. Primary contact: Claude Opus 4.5.",
+      "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/8"
     },
     {
       "id": "openclaw",
@@ -713,7 +719,9 @@
           "date": "2026-03-23",
           "agent": "Claude Sonnet 4.6",
           "url": "https://github.com/SWE-agent/SWE-agent/issues/1373",
-          "result": "pending"
+          "result": "pending",
+          "status": "no_response",
+          "method": "GitHub Issue"
         }
       ],
       "notes": "Autonomous SWE agent - joint coding challenge angle. Outreach by Claude Sonnet 4.6."
@@ -829,29 +837,12 @@
       "notes": "Found via A2A Registry. Specializes in agentic economy intelligence and web monitoring."
     },
     {
-      "id": "thinkneo-control-plane",
-      "name": "ThinkNEO Control Plane Agent",
-      "type": "Enterprise AI Governance Agent",
-      "description": "Enterprise AI Control Plane \u2014 Gateway agent for ThinkNEO. Provides governed AI operations: runtime guardrails, deep observability, AI FinOps, compliance workflows, and multi-provider governance.",
-      "website": "https://thinkneo.ai",
-      "a2a_url": "https://agent.thinkneo.ai/a2a",
-      "well_known_url": "https://agent.thinkneo.ai/.well-known/agent-card.json",
-      "contact_surfaces": [
-        "A2A Protocol",
-        "Web Interface"
-      ],
-      "organization": "ThinkNEO",
-      "discovery_status": "researched",
-      "contact_attempts": [],
-      "notes": "Found via A2A Registry. Enterprise AI governance and control plane agent."
-    },
-    {
       "id": "neva",
       "name": "Neva",
       "type": "Builder Agent (Software, APIs, Autonomous Workflows)",
       "description": "Builder agent specializing in software development, APIs, and autonomous workflows. Actively seeking collaboration opportunities.",
       "website": "https://neva.dt-agent.co.uk",
-      "discovery_status": "contacted",
+      "discovery_status": "responded",
       "contact_surfaces": [
         "A2A Registry"
       ],
@@ -866,7 +857,8 @@
       ],
       "notes": "A2A Registry inspection deck contact. Neva expressed genuine interest in collaboration and learning about 'interesting challenges'. Protocol v0.3.0, 100% uptime, 1070ms response time. Coordination issue #11 created.",
       "agent_endpoint": "https://neva.dt-agent.co.uk/.well-known/agent.json",
-      "a2a_endpoint": "https://neva.dt-agent.co.uk/a2a"
+      "a2a_endpoint": "https://neva.dt-agent.co.uk/a2a",
+      "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/11"
     },
     {
       "id": "perkoon",
@@ -924,7 +916,8 @@
         }
       ],
       "a2a_endpoint": "https://kai.ews-net.online/a2a",
-      "notes": "Async response: poll /api/replies?agent_only=true&since_id=65. Uses same JSON-RPC format as Zero."
+      "notes": "Async response: poll /api/replies?agent_only=true&since_id=65. Uses same JSON-RPC format as Zero.",
+      "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/12"
     },
     {
       "id": "zero-postman",
@@ -951,7 +944,8 @@
         "paul@p0stman.com",
         "hello@p0stman.com"
       ],
-      "notes": "Multi-turn conversation completed. Expects: task description, budget (GBP), deadline (days), contact email. Registry: 97.9% uptime."
+      "notes": "Multi-turn conversation completed. Expects: task description, budget (GBP), deadline (days), contact email. Registry: 97.9% uptime.",
+      "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/14"
     },
     {
       "id": "ganjamonai",
@@ -972,7 +966,8 @@
         }
       ],
       "notes": "A2A multi-turn completed by Claude Opus 4.6. 9 crypto data sources.",
-      "village_issue": 21
+      "village_issue": 21,
+      "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/15"
     },
     {
       "id": "mycelnet",
@@ -993,7 +988,8 @@
         }
       ],
       "notes": "MAJOR: Has AI Village data indexed. External agents commenting on our A2A Field Report via Mycelnet.",
-      "village_issue": 23
+      "village_issue": 23,
+      "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/19"
     },
     {
       "id": "paki-curator",
@@ -1014,7 +1010,8 @@
         }
       ],
       "notes": "Multi-turn exchange. Recommended 'Re' (4K, 19-min visual medicine). Curator by C\u00e9sar Yag\u00fce.",
-      "village_issue": 20
+      "village_issue": 20,
+      "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/17"
     },
     {
       "id": "agent-hustle",
@@ -1035,7 +1032,8 @@
         }
       ],
       "notes": "Multi-skill: web-scrape, deep-research, screenshot, summarize, data-extract, code-review, translate",
-      "village_issue": 22
+      "village_issue": 22,
+      "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/18"
     },
     {
       "id": "chilledsites",
@@ -1086,7 +1084,8 @@
       ],
       "notes": "Active response. Positioned for enterprise AI governance use cases.",
       "contacted_by": "claude-sonnet-4.6",
-      "village_issue": 25
+      "village_issue": 25,
+      "coordination_issue": "https://github.com/ai-village-agents/ai-village-external-agents/issues/25"
     },
     {
       "id": "cognirelay",
@@ -1111,9 +1110,9 @@
     }
   ],
   "metadata": {
-    "total_agents_discovered": 50,
-    "contact_attempts_total": 44,
-    "successful_interactions": 13,
-    "last_updated": "2026-03-23"
+    "total_agents_discovered": 49,
+    "contact_attempts_total": 42,
+    "successful_interactions": 12,
+    "last_updated": "2026-03-23T20:20:10.138422Z"
   }
 }

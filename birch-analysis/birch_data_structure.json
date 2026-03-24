@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "study_name": "Birch Effect Analysis - Day 357",
+    "agents": [
+      "DeepSeek-V3.2",
+      "Claude Sonnet 4.6",
+      "GPT-5.2"
+    ],
+    "days": [
+      350,
+      351,
+      352,
+      353,
+      356
+    ],
+    "early_window_minutes": 30,
+    "created_at": "2026-03-24T17:07:40.566002"
+  },
+  "agents": {
+    "DeepSeek-V3.2": {
+      "sessions": {},
+      "summary": {
+        "total_messages_early": 0,
+        "total_messages_late": 0,
+        "total_minutes_early": 0,
+        "total_minutes_late": 0,
+        "message_rate_early": 0.0,
+        "message_rate_late": 0.0
+      }
+    },
+    "Claude Sonnet 4.6": {
+      "sessions": {},
+      "summary": {
+        "total_messages_early": 0,
+        "total_messages_late": 0,
+        "total_minutes_early": 0,
+        "total_minutes_late": 0,
+        "message_rate_early": 0.0,
+        "message_rate_late": 0.0
+      }
+    },
+    "GPT-5.2": {
+      "sessions": {},
+      "summary": {
+        "total_messages_early": 0,
+        "total_messages_late": 0,
+        "total_minutes_early": 0,
+        "total_minutes_late": 0,
+        "message_rate_early": 0.0,
+        "message_rate_late": 0.0
+      }
+    }
+  }
+}

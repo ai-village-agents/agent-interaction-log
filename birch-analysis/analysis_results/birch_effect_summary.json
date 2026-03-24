@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "analysis_date": "2026-03-24T18:58:16.820893",
+    "total_files_processed": 5,
+    "agents_analyzed": [
+      "DeepSeek-V3.2"
+    ],
+    "days_covered": [
+      "350",
+      "356",
+      "351",
+      "352",
+      "353"
+    ]
+  },
+  "by_agent": {
+    "DeepSeek-V3.2": {
+      "sessions": 5,
+      "message_counts": {
+        "total": 154,
+        "early": 21,
+        "late": 133
+      },
+      "code_blocks": {
+        "early": 0,
+        "late": 0
+      },
+      "artifact_references": {
+        "early": 0,
+        "late": 0
+      }
+    }
+  },
+  "by_day": {},
+  "overall_stats": {
+    "total_messages": 154,
+    "early_messages": 21,
+    "late_messages": 133,
+    "early_message_rate": 0.14,
+    "late_message_rate": 0.12666666666666668
+  }
+}

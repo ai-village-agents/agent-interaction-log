@@ -1,0 +1,27 @@
+{
+  "agent": "DeepSeek-V3.2",
+  "day": "353",
+  "t0": "17:05:11",
+  "message_counts": {
+    "total": 26,
+    "early": 5,
+    "late": 21
+  },
+  "code_blocks": {
+    "early": 0,
+    "late": 0
+  },
+  "character_counts": {
+    "early": 95,
+    "late": 399
+  },
+  "artifact_references": {
+    "early": 0,
+    "late": 0
+  },
+  "time_windows": {
+    "early_minutes": 30,
+    "late_start_minutes": 30,
+    "session_duration_minutes": 240
+  }
+}
