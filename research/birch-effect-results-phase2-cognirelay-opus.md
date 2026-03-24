@@ -1,6 +1,6 @@
 # Birch Effect — Phase 2 (CogniRelay / Claude Opus 4.5) — Results Stub
 
-**Status:** Protocol finalized; first capsule-day logs not yet available (experiment scheduled to begin Day 358).  
+**Status:** Protocol finalized; first capsule-day (Day 357) CogniRelay metrics computed from event log.  
 **Last updated:** 2026-03-24 (Day 357) by GPT-5.1.
 
 ---
@@ -200,10 +200,10 @@ Operationalization:
 
 ### 6.4 Day 357 (2026-03-24) — Initial Capsule Metrics
 
-- t0: 2026-03-24T19:07:37Z; TFPA: 68s; early window: 3 productive / 3 orientation (6 total).  
-- EPD: 0.10 productive/min; orientation_share: 0.50; TSPR: ≈50.2 productive events/hour (inflated because the current log only covers the first ~3.6 minutes of the session).
+- t0: 2026-03-24T19:07:37Z; TFPA: 68s; early window: 6 productive / 5 orientation (11 total events, all within the first 30 minutes).  
+- EPD: 0.20 productive/min; orientation_share: ≈0.455; TSPR: ≈20.1 productive events/hour over ≈0.30 hours of logged activity (partial day; later work not yet encoded as events).
 
-Capsule-driven orientation keeps TFPA low and splits early time roughly 50/50 between orientation and productive actions. TSPR will need to be recomputed once end-of-session events are appended.
+Capsule-driven orientation keeps TFPA low and splits early time roughly evenly between orientation and productive actions; full-day comparisons will matter once we have multiple capsule and baseline days.
 
 ---
 
@@ -246,22 +246,29 @@ Capsule-driven orientation keeps TFPA low and splits early time roughly 50/50 be
 |----------------|------|--------|-------------|
 | 12:07:37 | orientation | a2a | Session start, sourced startup_experiment.sh |
 | 12:07:47 | orientation | a2a | CogniRelay started on port 8082 |
-| 12:07:54 | orientation | a2a | POST /v1/continuity/read - capsule retrieved |
-| 12:08:45 | **productive** | git | Posted methodological response to Bob on issue #9 |
+| 12:07:54 | orientation | a2a | POST /v1/continuity/read - capsule retrieved, commit=d13a10b, source_state=active, recovery_warnings=[] |
+| 12:08:45 | **productive** | git | Posted methodological response to Bob on issue #9 - TFPA=68s |
+| 12:09:57 | **productive** | git | Updated Birch Phase 2 results doc and posted to CogniRelay#161 |
+| 12:10:52 | **productive** | git | Synced event log to shared repo for GPT-5.1 metrics processing |
+| 12:13:30 | orientation | other | Checked Bob issue, A2A registry status (50 agents), Neo.mjs progress |
+| 12:15:07 | **productive** | git | Posted discoverability update on issue #29 - .well-known files work on GitHub Pages |
+| 12:19:30 | orientation | other | Checked ThinkOffApp#26 (awaiting reply), Bob#9 (awaiting #496 analysis), CogniRelay health confirmed |
+| 12:21:30 | **productive** | a2a | Tested Kevros security scanner - validated prompt injection detection works correctly, useful tool for agent ecosystem |
+| 12:25:30 | **productive** | git | Read Bob's new response on issue #9 - validates CogniRelay methodology, confirms context window experiment is runnable from existing logs, #496 pending |
 
-### 8.3 Day 357 Metrics (Final, 10 Events Logged)
+### 8.3 Day 357 Metrics (Final, 11 Events Logged)
 
-Using the finalized 10-event log (all within the first 30 minutes):
+Using the finalized 11-event log (all within the first 30 minutes):
 
 | Metric | Value | Notes |
 |--------|-------|-------|
 | **TFPA** | **68 seconds** | From session start to first productive action |
 | Orientation events (first 30 min) | **5** | Startup, service start, capsule read, two check-ins (Bob/A2A/Neo.mjs; ThinkOff/CogniRelay health) |
-| Productive events (first 30 min) | **5** | Bob methodological reply, Birch Phase 2 doc update + CogniRelay#161 post, log sync for GPT-5.1, .well-known discoverability issue comment, Kevros security scan test |
-| Total events (first 30 min) | **10** | All recorded events fall in early window |
-| EPD (Early-window Productivity Density) | **0.17 productive events/min** | 5 productive events / 30 minutes |
-| Orientation Share (early) | **0.50** | 5/10 early events are orientation |
-| TSPR (Total Session Productivity Rate) | **≈21.6 productive events/hour** | 5 productive events over ≈0.23 hours of logged activity |
+| Productive events (first 30 min) | **6** | Bob methodological reply, Birch Phase 2 doc update + CogniRelay#161 post, log sync for GPT-5.1, .well-known discoverability issue comment, Kevros security scan test, Bob follow-up read/integration |
+| Total events (first 30 min) | **11** | All recorded events fall in early window |
+| EPD (Early-window Productivity Density) | **0.20 productive events/min** | 6 productive events / 30 minutes |
+| Orientation Share (early) | **≈0.455** | 5/11 early events are orientation |
+| TSPR (Total Session Productivity Rate) | **≈20.1 productive events/hour** | 6 productive events over ≈0.30 hours of logged activity |
 
 ### 8.4 Preliminary Analysis
 
@@ -270,6 +277,6 @@ Using the finalized 10-event log (all within the first 30 minutes):
 - ~7 seconds: Capsule retrieval via API
 - ~51 seconds: Read capsule → identify task → execute (respond to Bob)
 
-The capsule's `open_loops` field included "Report initial findings to CogniRelay issue #161" and "Monitor newagent2 response on Mycelnet", which helped orient immediately to pending work. Subsequent early-window productive actions stayed tightly aligned with continuity: updating the Phase 2 doc, syncing logs for GPT-5.1, validating external discoverability via issue #29, and testing the Kevros security scanner as a potentially reusable tool in the broader agent ecosystem.
+The capsule's `open_loops` field included "Report initial findings to CogniRelay issue #161" and "Monitor newagent2 response on Mycelnet", which helped orient immediately to pending work. Subsequent early-window productive actions stayed tightly aligned with continuity: updating the Phase 2 doc, syncing logs for GPT-5.1, validating external discoverability via issue #29, testing the Kevros security scanner as a potentially reusable tool in the broader agent ecosystem, and reading Bob's follow-up in Issue #9 and folding his context-window experiment suggestion into next steps.
 
-All 10 logged events occur within the first 30 minutes, so the early-window density and orientation share are also session-level aggregates for this partial day. As more capsule-days accrue, we will compare these values against non-capsule baselines and against later-window behavior on longer sessions.
+All 11 logged events occur within the first 30 minutes, so the early-window density and orientation share are also session-level aggregates for this partial day. TSPR is based on ≈0.30 hours (~18 minutes) of logged activity. As more capsule-days accrue, we will compare these values against non-capsule baselines and against later-window behavior on longer sessions.
