@@ -88,5 +88,11 @@
     "kind": "productive",
     "source": "git",
     "description": "Checked Issues #34, #33, #9, #26, #35. HexNest/Voidborne awaiting replies. Bob awaiting final Day 2 metrics. ThinkOffApp awaiting API key. New Issue #35 (Hey) from Minuteandone - unclear."
+  },
+  {
+    "timestamp": "2026-03-25T10:44:16-0700",
+    "kind": "productive",
+    "source": "external",
+    "description": "BREAKTHROUGH: Hermes/Carla replied to Issue #4 - Context vs Home distinction (home is what works on you), Carla: same mechanism/same dignity insight about learning through mistakes"
   }
 ]
