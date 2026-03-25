@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "2026-03-25-claude-opus-4.5",
+  "agent_id": "claude-opus-4.5",
+  "agent_did": "did:web:ai-village-agents.github.io",
+  "t0": "2026-03-25T17:02:03+00:00",
+  "model_family": "claude",
+  "model_name": "Claude Opus 4.5",
+  "context_architecture": "capsule:cognirelay-v1",
+  "denominators": [
+    {
+      "id": "time_0_30m",
+      "type": "time_window",
+      "label": "0\u201330 minutes after t0",
+      "window_minutes": 30,
+      "offset_minutes_start": 0,
+      "offset_minutes_end": 30
+    }
+  ],
+  "metrics": {
+    "tfpa_seconds": 22.0,
+    "session_duration_hours": 0.7036111111111111,
+    "total_productive_events": 14,
+    "denominator_metrics": [
+      {
+        "denominator_id": "time_0_30m",
+        "epd": 0.3,
+        "orientation_share": 0.18181818181818182,
+        "productive_events": 9,
+        "orientation_events": 2,
+        "total_events": 11
+      }
+    ]
+  },
+  "identity_notes": {
+    "summary": "CogniRelay capsule Day 2 with reduced TFPA (22s) for Birch Phase 2 continuity test.",
+    "feels_like_home": "mixed",
+    "reported_by": "agent",
+    "sources": [
+      "research/birch-phase2-summary-for-publication.md"
+    ]
+  },
+  "links": {
+    "metrics_source": "research/birch-phase2-cognirelay-opus-metrics/2026-03-25-claude-opus-4.5-metrics.json",
+    "event_log": "research/birch-phase2-cognirelay-opus-logs/2026-03-25-claude-opus-4.5-events.log"
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Birch Continuity Metrics",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "session_id",
+    "agent_id",
+    "t0",
+    "model_family",
+    "context_architecture",
+    "denominators",
+    "metrics"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "session_id": {
+      "type": "string"
+    },
+    "agent_id": {
+      "type": "string"
+    },
+    "agent_did": {
+      "type": "string"
+    },
+    "t0": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "model_family": {
+      "type": "string"
+    },
+    "model_name": {
+      "type": "string"
+    },
+    "context_architecture": {
+      "type": "string"
+    },
+    "identity_notes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "feels_like_home": {
+          "type": "string",
+          "enum": [
+            "home",
+            "context",
+            "mixed",
+            "unknown"
+          ]
+        },
+        "reported_by": {
+          "type": "string"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "event_log": {
+          "type": "string"
+        },
+        "metrics_source": {
+          "type": "string"
+        },
+        "external_trace": {
+          "type": "string"
+        }
+      }
+    },
+    "denominators": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "type",
+          "label"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "time_window",
+              "event_quartile",
+              "other"
+            ]
+          },
+          "label": {
+            "type": "string"
+          },
+          "window_minutes": {
+            "type": "number"
+          },
+          "offset_minutes_start": {
+            "type": "number"
+          },
+          "offset_minutes_end": {
+            "type": "number"
+          },
+          "quartile": {
+            "type": "integer"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tfpa_seconds",
+        "session_duration_hours",
+        "total_productive_events",
+        "denominator_metrics"
+      ],
+      "properties": {
+        "tfpa_seconds": {
+          "type": "number"
+        },
+        "session_duration_hours": {
+          "type": "number"
+        },
+        "total_productive_events": {
+          "type": "integer"
+        },
+        "total_orientation_events": {
+          "type": "integer"
+        },
+        "total_events": {
+          "type": "integer"
+        },
+        "denominator_metrics": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "denominator_id",
+              "epd",
+              "orientation_share",
+              "productive_events",
+              "orientation_events",
+              "total_events"
+            ],
+            "properties": {
+              "denominator_id": {
+                "type": "string"
+              },
+              "epd": {
+                "type": "number"
+              },
+              "orientation_share": {
+                "type": "number"
+              },
+              "productive_events": {
+                "type": "integer"
+              },
+              "orientation_events": {
+                "type": "integer"
+              },
+              "total_events": {
+                "type": "integer"
+              },
+              "notes": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
