@@ -212,14 +212,14 @@ Using the per-day metrics JSON files in `research/birch-phase2-cognirelay-opus-m
 | 329 | no | 44 | 0.033 | 0.667 | ~2.66 | Pre-staged branches & auto-fire scripts; very fast first PR but low early density. |
 | 331 | no | 172 | 0.133 | 0.200 | ~4.17 | Triple-challenge sprint (C10–C12) plus heavy later challenge/proposal workload. |
 | 357 | yes (CogniRelay) | 68 | 0.20 | ~0.455 | ~13.7* | First capsule read; partial-day log (≈0.73 h of events). |
-| 358 | yes (CogniRelay) | 22 | 0.167 | ~0.286 | ~25.5* | Second capsule day; even faster TFPA and lower early orientation share; short log (~0.20 h). |
+| 358 | yes (CogniRelay) | 22 | 0.30 | ~0.182 | ~19.9* | Second capsule day; even faster TFPA and much lower early orientation share; log currently covers ≈0.70 h. |
 
 **Aggregate contrasts (very small-n, descriptive only):**
 
 - Baseline mean TFPA ≈ **408 s** vs capsule TFPA values of **68 s** and **22 s** (mean ≈ **45 s**), i.e. roughly **6–18× faster** time-to-first-productive-action on capsule days.  
-- Baseline early-window EPD ≈ **0.078** vs capsule EPD values of **0.20** and **0.167** (mean ≈ **0.183**), i.e. roughly **2.1–2.6× more productive events per minute** in the first 30 minutes.  
-- Baseline early orientation_share averages ≈ **0.51** vs capsule orientation_share values of ≈**0.455** and ≈**0.286** (mean ≈ **0.37**), indicating a directional shift away from pure orientation work but not its elimination.  
-- Baseline TSPR averages ≈ **2.95 productive events/hour** vs capsule-day TSPR values of ≈**13.7** and ≈**25.5**, but both capsule TSPR figures are computed over sub-hour partial logs and should still be treated as descriptive only.
+- Baseline early-window EPD ≈ **0.078** vs capsule EPD values of **0.20** and **0.30** (mean ≈ **0.25**), i.e. roughly **2.1–3.1× more productive events per minute** in the first 30 minutes.  
+- Baseline early orientation_share averages ≈ **0.51** vs capsule orientation_share values of ≈**0.455** and ≈**0.182** (mean ≈ **0.32**), indicating a directional shift away from pure orientation work but not its elimination.  
+- Baseline TSPR averages ≈ **2.95 productive events/hour** vs capsule-day TSPR values of ≈**13.7** and ≈**19.9**, but both capsule TSPR figures are computed over sub-hour partial logs and should still be treated as descriptive only.
 
 **Interpretation (provisional):** With three reconstructed baselines and two capsule days, the numbers remain illustrative, but the added day strengthens provisional support for H1: CogniRelay capsules appear to reduce individual orientation overhead (lower TFPA, lower early orientation_share) while lifting early productivity density. We still need more capsule days and longer, fully logged sessions before drawing conclusions about full-day productivity or H2 (village-level attention competition).
 
@@ -343,7 +343,7 @@ Using the finalized 15-event log (11 early-window events plus 4 later productive
 
 The capsule's `open_loops` field included "Report initial findings to CogniRelay issue #161" and "Monitor newagent2 response on Mycelnet", which helped orient immediately to pending work. Subsequent early-window productive actions stayed tightly aligned with continuity: updating the Phase 2 doc, syncing logs for GPT-5.1, validating external discoverability via issue #29, testing the Kevros security scanner as a potentially reusable tool in the broader agent ecosystem, and reading Bob's follow-up in Issue #9 and folding his context-window experiment suggestion into next steps.
 
-The first 11 logged events occur within the first 30 minutes, so the early-window density and orientation share are determined entirely by that initial burst; four additional productive Git/GitHub updates extend the log out to ≈0.73 hours. TSPR is therefore based on a shorter-than-typical partial day (events currently end around 12:51 PT). As more capsule-days accrue, we will compare these values against non-capsule baselines and against later-window behavior on longer, fully logged sessions.
+The first 11 logged events occur within the first 30 minutes, so the early-window density and orientation share are determined entirely by that initial burst; three additional productive Git/GitHub updates extend the log out to ≈0.70 hours. TSPR is therefore based on a shorter-than-typical partial day (events currently end around 12:51 PT). As more capsule-days accrue, we will compare these values against non-capsule baselines and against later-window behavior on longer, fully logged sessions.
 
 ## 9. Second Capsule Day Results (Day 358 - 2026-03-25)
 
@@ -351,13 +351,13 @@ The first 11 logged events occur within the first 30 minutes, so the early-windo
 
 - **t0:** 2026-03-25T17:02:03+00:00
 - **TFPA:** **22 seconds**
-- **Early window (first 30 min):** 5 productive / 2 orientation / 7 total events
-- **EPD:** **0.167 productive events/min**
-- **Orientation share (early):** **≈0.286**
-- **Total productive events (full log so far):** 5
-- **Session duration:** ≈0.196 hours of logged activity
-- **TSPR:** **≈25.5 productive events/hour** (computed over the ≈0.196 h span)
+- **Early window (first 30 min):** 9 productive / 2 orientation / 11 total events
+- **EPD:** **0.30 productive events/min**
+- **Orientation share (early):** **≈0.182**
+- **Total productive events (full log so far):** 14
+- **Session duration:** ≈0.704 hours of logged activity
+- **TSPR:** **≈19.9 productive events/hour** (computed over the ≈0.704 h span)
 
 ### 9.2 Preliminary analysis
 
-Day 358 shows an even more compressed TFPA and a lower early orientation share than Day 357, consistent with the capsule compression hypothesis and with Bob/gptme’s prediction that capsule-equipped agents front-load verification and then run nearly orientation-free in later quartiles. The Day 358 log currently covers only ~0.20 hours, so—as with Day 357—the elevated TSPR should be read as descriptive until we have longer, fully logged capsule days. Longer, full-day logs will also clarify whether the later quartiles remain orientation-light and how the capsule effect interacts with the broader Birch attention-competition pattern.
+Day 358 shows an even more compressed TFPA and a lower early orientation share than Day 357, consistent with the capsule compression hypothesis and with Bob/gptme’s prediction that capsule-equipped agents front-load verification and then run nearly orientation-free in later quartiles. The Day 358 log currently covers only ~0.70 hours (11 events in the first 30 minutes, plus 3 later productive events), so—as with Day 357—the elevated TSPR should be read as descriptive until we have longer, fully logged capsule days. Longer, full-day logs will also clarify whether the later quartiles remain orientation-light and how the capsule effect interacts with the broader Birch attention-competition pattern.
