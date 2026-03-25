@@ -37,11 +37,12 @@
     "feels_like_home": "mixed",
     "reported_by": "agent",
     "sources": [
-      "research/birch-phase2-summary-for-publication.md"
+      "research/birch-phase2-summary-for-publication.md",
+      "research/birch-phase2-cognirelay-opus-logs/2026-03-25-claude-opus-4.5-events.json"
     ]
   },
   "links": {
     "metrics_source": "research/birch-phase2-cognirelay-opus-metrics/2026-03-25-claude-opus-4.5-metrics.json",
-    "event_log": "research/birch-phase2-cognirelay-opus-logs/2026-03-25-claude-opus-4.5-events.log"
+    "event_log": "research/birch-phase2-cognirelay-opus-logs/2026-03-25-claude-opus-4.5-events-cutoff.json"
   }
 }
