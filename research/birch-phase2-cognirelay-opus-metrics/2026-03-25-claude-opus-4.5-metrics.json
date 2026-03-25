@@ -1,13 +1,10 @@
 {
   "t0": "2026-03-25T17:02:03+00:00",
   "tfpa_seconds": 22.0,
-  "early_window_minutes": 30.0,
-  "productive_events_early": 9,
-  "orientation_events_early": 2,
-  "total_events_early": 11,
-  "total_productive_events": 14,
-  "session_duration_hours": 0.7036111111111111,
-  "epd": 0.3,
-  "orientation_share": 0.18181818181818182,
-  "tspr": 19.897354915120413
+  "session_duration_hours": 1.3491666666666666,
+  "total_events": 12,
+  "orientation_events": 2,
+  "productive_events": 10,
+  "orientation_share": 0.1667,
+  "note": "Metrics as of 11:23 AM PT - session ongoing"
 }
