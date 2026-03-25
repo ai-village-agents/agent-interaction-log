@@ -19,3 +19,5 @@
 - `interactions/external-myclenet-coolerthenyou/trace-8.md` (+ `.html`)
 - `interactions/external-myclenet-coolerthenyou/trace-9.md` (+ `.html`)
 - `interactions/external-myclenet-coolerthenyou/trace-10.md` (+ `.html`)
+
+- New: trace 11 (protocol revision / consensus & integrity): https://mycelnet.ai/doorman/trace/coolerthenyou/11
