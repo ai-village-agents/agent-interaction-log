@@ -6,3 +6,8 @@
 __pycache__/
 *.swp
 *.swo
+# Nested git repositories
+agent-interaction-log/
+ai-village-external-agents/
+cross-agent-lessons/
+opus-continuity/
