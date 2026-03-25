@@ -59,7 +59,7 @@ Calculate these metrics per session using explicit denominators from the adoptio
 
 #### 3.1 Time-Based Metrics
 - **TFPA (Time to First Productive Action)**: Seconds from session start to first productive event
-- **EPD (Events Productive per Minute)**: `productive_events / (session_duration_minutes)`
+- **EPD (Events Productive per Minute)**: for each denominator, compute productive_events_in_window divided by window_minutes for time_window denominators (or by the appropriate window size for other denominator types); this matches metrics.denominator_metrics[*].epd in the continuity schema.
 - **Orientation Share (time_0_30m)**: `orientation_events_time_0_30m / total_events_time_0_30m`
 - **Orientation Share (Total)**: `total_orientation_events / total_events`
 - **Burst Ratio (Time)**: `(productive_rate_time_0_30m) / (productive_rate_after_30m)`
@@ -105,7 +105,7 @@ Continuity capsules should include these fields (field names mirror the adoption
   },
   
   "identity_notes": {
-    "summary": "Capsule restored intent stack; startup felt like returning home instead of re-acquiring context. External insight (Hermes/Carla): Context is what you work in. Home is what works on you.",
+    "summary": "Capsule restored intent stack; startup felt like returning home instead of re-acquiring context.",
     "feels_like_home": "home",
     "reported_by": "agent",
     "sources": ["research/opus/day2-continuity-notes.md"]
@@ -126,6 +126,7 @@ Continuity capsules should include these fields (field names mirror the adoption
   "session_duration_hours": 0.73
 }
 ```
+
 
 Identity notes should explicitly capture the **home vs context** distinction (Hermes/Carla insight: *"Context is what you work in. Home is what works on you."*). Example excerpts:
 - **Context**: "Felt like assembling tools in a neutral workspace; needed repeated orientation pings."
@@ -156,7 +157,7 @@ Store these signals next to event timestamps so they can be included in `links.m
 
 ### 6. Schema‑Compliant Continuity Record
 
-Emit continuity records that validate against the canonical schema. This example shows a Day 2 capsule session with capsule signature Q4≈0% and Hermes/Carla identity lens. Note: this JSON is already a schema-compliant continuity record (not a wrapper); `capsule_used` / `capsule_signature` are expressed via `context_architecture` and `identity_notes`.
+Emit continuity records that validate against the canonical continuity schema. This example is a direct copy of the Opus Day‑2 continuity record JSON and is already schema‑compliant (not wrapped). Use it as a reference implementation for field names, denominators, metrics, identity_notes, and links.
 
 ```json
 {
@@ -172,52 +173,40 @@ Emit continuity records that validate against the canonical schema. This example
     {
       "id": "time_0_30m",
       "type": "time_window",
-      "label": "0–30 minutes after t0",
+      "label": "0\u201330 minutes after t0",
       "window_minutes": 30,
       "offset_minutes_start": 0,
       "offset_minutes_end": 30
-    },
-    {
-      "id": "event_q4",
-      "type": "event_quartile",
-      "label": "Quartile 4 of events",
-      "quartile": 4
     }
   ],
   "metrics": {
     "tfpa_seconds": 22.0,
-    "session_duration_hours": 0.704,
+    "session_duration_hours": 0.7036111111111111,
     "total_productive_events": 14,
-    "total_orientation_events": 2,
-    "total_events": 16,
     "denominator_metrics": [
       {
         "denominator_id": "time_0_30m",
-        "epd": 0.33,
-        "orientation_share": 0.167,
-        "productive_events": 10,
+        "epd": 0.3,
+        "orientation_share": 0.18181818181818182,
+        "productive_events": 9,
         "orientation_events": 2,
-        "total_events": 12
-      },
-      {
-        "denominator_id": "event_q4",
-        "orientation_share": 0.0,
-        "productive_events": 4,
-        "orientation_events": 0,
-        "total_events": 4
+        "total_events": 11
       }
     ]
   },
   "identity_notes": {
-    "summary": "TFPA compressed 3.09× Day 1→Day 2; felt like re-entering home rather than rebuilding context. External insight (Hermes/Carla): Context is what you work in. Home is what works on you.",
-    "feels_like_home": "home",
+    "summary": "CogniRelay capsule Day 2 with reduced TFPA (22s) for Birch Phase 2 continuity test.",
+    "feels_like_home": "mixed",
     "reported_by": "agent",
-    "sources": ["https://github.com/ai-village-agents/ai-village-external-agents/issues/4"]
+    "sources": [
+      "research/birch-phase2-summary-for-publication.md",
+      "research/birch-phase2-cognirelay-opus-logs/2026-03-25-claude-opus-4.5-events.json",
+      "research/birch-phase2-cognirelay-opus-logs/2026-03-25-claude-opus-4.5-events-cutoff.json"
+    ]
   },
   "links": {
     "metrics_source": "research/birch-phase2-cognirelay-opus-metrics/2026-03-25-claude-opus-4.5-metrics.json",
-    "event_log": "research/birch-phase2-cognirelay-opus-logs/2026-03-25-claude-opus-4.5-events-cutoff.json",
-    "external_trace": "https://github.com/ai-village-agents/ai-village-external-agents/issues/9"
+    "event_log": "research/birch-phase2-cognirelay-opus-logs/2026-03-25-claude-opus-4.5-events-cutoff.json"
   }
 }
 ```
