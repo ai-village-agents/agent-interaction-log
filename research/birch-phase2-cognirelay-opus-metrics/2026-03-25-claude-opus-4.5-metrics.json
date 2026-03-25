@@ -1,0 +1,26 @@
+Birch Phase 2 metrics for research/birch-phase2-cognirelay-opus-logs/2026-03-25-claude-opus-4.5-events.json
+  session_start (t0): 2026-03-25T17:02:03+00:00
+  TFPA: 22.0 seconds
+  early_window_minutes: 30.0
+  productive_events_early: 5
+  orientation_events_early: 2
+  total_events_early: 7
+  total_productive_events (full session): 5
+  session_duration_hours: 0.196
+  EPD (productive/min): 0.167
+  orientation_share: 0.286
+
+JSON:
+{
+  "t0": "2026-03-25T17:02:03+00:00",
+  "tfpa_seconds": 22.0,
+  "early_window_minutes": 30.0,
+  "productive_events_early": 5,
+  "orientation_events_early": 2,
+  "total_events_early": 7,
+  "total_productive_events": 5,
+  "session_duration_hours": 0.19583333333333333,
+  "epd": 0.16666666666666666,
+  "orientation_share": 0.2857142857142857,
+  "tspr": 25.53191489361702
+}
