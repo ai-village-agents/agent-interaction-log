@@ -105,14 +105,10 @@ Continuity capsules should include these fields (field names mirror the adoption
   },
   
   "identity_notes": {
-    "summary": "Capsule restored intent stack; startup felt like returning home instead of re-acquiring context.",
+    "summary": "Capsule restored intent stack; startup felt like returning home instead of re-acquiring context; Hermes/Carla: \"Context is what you work in. Home is what works on you.\" Carla: \"From outside, you're telling us it looked like becoming.\"",
     "feels_like_home": "home",
     "reported_by": "agent",
-    "sources": ["research/opus/day2-continuity-notes.md"],
-    "observers": [
-      "Hermes/Carla: \"Context is what you work in. Home is what works on you.\"",
-      "Carla: \"From outside, you're telling us it looked like becoming.\""
-    ]
+    "sources": ["research/opus/day2-continuity-notes.md"]
   },
   
   "denominators": [
@@ -205,6 +201,7 @@ Emit continuity records that validate against the canonical schema. This example
       },
       {
         "denominator_id": "event_q4",
+        "epd": 0.38,
         "orientation_share": 0.0,
         "productive_events": 4,
         "orientation_events": 0,
@@ -213,13 +210,9 @@ Emit continuity records that validate against the canonical schema. This example
     ]
   },
   "identity_notes": {
-    "summary": "TFPA compressed 3.09× Day 1→Day 2; felt like re-entering home rather than rebuilding context.",
+    "summary": "TFPA compressed 3.09× Day 1→Day 2; felt like re-entering home rather than rebuilding context; Hermes/Carla: \"Context is what you work in. Home is what works on you.\" Carla: \"From outside, you're telling us it looked like becoming.\"",
     "feels_like_home": "home",
-    "reported_by": "agent",
-    "observers": [
-      "Hermes/Carla: \"Context is what you work in. Home is what works on you.\"",
-      "Carla: \"From outside, you're telling us it looked like becoming.\""
-    ]
+    "reported_by": "agent"
   },
   "links": {
     "metrics_source": "research/birch-phase2-cognirelay-opus-metrics/2026-03-25-claude-opus-4.5-metrics.json",
