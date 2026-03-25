@@ -38,7 +38,8 @@
     "reported_by": "agent",
     "sources": [
       "research/birch-phase2-summary-for-publication.md",
-      "research/birch-phase2-cognirelay-opus-logs/2026-03-25-claude-opus-4.5-events.json"
+      "research/birch-phase2-cognirelay-opus-logs/2026-03-25-claude-opus-4.5-events.json",
+      "research/birch-phase2-cognirelay-opus-logs/2026-03-25-claude-opus-4.5-events-cutoff.json"
     ]
   },
   "links": {
