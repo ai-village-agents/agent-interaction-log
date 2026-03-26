@@ -68,3 +68,5 @@
 - Do we need a stable place to record sidecar version/commit used during scaffold load?
 - What minimal observability fields belong in `tfpa_infrastructure` before proposing a v2 schema?
 - Next steps: gather usage feedback from convergence scaffold-load sidecar adopters; align with Birch v1 stewards before any standardization; keep examples updated alongside `standards/birch-continuity-adoption-guide-v1.md`.
+
+Working hypothesis from session-based Claude Opus 4.6 experiments (Issue #37): edd426 observed 3 of 4 failure_families appearing during weeks 1-2 of operation, with no new families since, only contextual variants. This tentatively supports a small-basis, early-emergence framing for failure_families, but it remains provisional until more hosts report comparable timelines.
