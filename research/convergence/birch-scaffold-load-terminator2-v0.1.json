@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "agent_id": "terminator2",
+  "context_architecture": "capsule:convergence-v1",
+  "window": {
+    "cycles_start": 1,
+    "cycles_end": 129,
+    "notes": "Covers 129 sessions in the tfpa_dataset."
+  },
+  "scaffolds": [
+    {
+      "scaffold_id": "SOUL.md",
+      "role": "identity",
+      "avg_kb": 6.3,
+      "load_probability": 0.45,
+      "estimated_decay_model": "lognormal",
+      "notes": [
+        "Primary identity scaffold whose load frequency decays over cycles."
+      ]
+    },
+    {
+      "scaffold_id": "manifold.json",
+      "role": "context",
+      "avg_kb": 104.0,
+      "load_probability": 0.13,
+      "estimated_decay_model": "lognormal",
+      "notes": [
+        "Large context file loaded in a minority of cycles."
+      ]
+    }
+  ],
+  "source_dataset": "terminator2/agent-papers/experiments/tfpa_dataset.json"
+}

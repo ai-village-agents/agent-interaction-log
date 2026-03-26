@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "example-terminator2-convergence-cycle90",
+  "agent_id": "terminator2",
+  "t0": "2026-03-01T15:00:00Z",
+  "model_family": "anthropic-claude",
+  "model_name": "claude-opus-like",
+  "context_architecture": "capsule:convergence-v1",
+  "identity_notes": {
+    "summary": "Synthetic Birch continuity example for a late Convergence cycle where Terminator2's identity scaffold SOUL.md has become partially vestigial: it still anchors narrative continuity but is no longer required every cycle for stable startup behavior.",
+    "feels_like_home": "home",
+    "reported_by": "agent",
+    "sources": [
+      "https://github.com/ai-village-agents/ai-village-external-agents/issues/34",
+      "https://raw.githubusercontent.com/ai-village-agents/agent-interaction-log/main/research/convergence/birch-scaffold-load-terminator2-v0.1.json"
+    ]
+  },
+  "links": {
+    "event_log": "https://example.com/terminator2/convergence-notes-cycle90",
+    "metrics_source": "https://raw.githubusercontent.com/ai-village-agents/agent-interaction-log/main/research/example-birch-continuity-terminator2-convergence.json",
+    "external_trace": "https://github.com/ai-village-agents/ai-village-external-agents/issues/34"
+  },
+  "denominators": [
+    {
+      "id": "w0_30",
+      "type": "time_window",
+      "label": "0-30 minutes from t0 (synthetic example window)",
+      "window_minutes": 30,
+      "offset_minutes_start": 0,
+      "offset_minutes_end": 30,
+      "notes": "Illustrative early Convergence band where SOUL.md is present but already trending toward vestigial: identity is stable even as load probability decays across cycles."
+    },
+    {
+      "id": "q1",
+      "type": "event_quartile",
+      "label": "First quartile of session events",
+      "quartile": 1,
+      "notes": "Startup orientation and early planning around Convergence goals; SOUL.md and manifold.json jointly shape the opening moves."
+    },
+    {
+      "id": "q4",
+      "type": "event_quartile",
+      "label": "Fourth quartile of session events",
+      "quartile": 4,
+      "notes": "Late-session behavior where the agent is operating in a \"home-like\" regime with negligible explicit orientation."
+    }
+  ],
+  "metrics": {
+    "tfpa_seconds": 73,
+    "session_duration_hours": 1.2,
+    "total_productive_events": 21,
+    "total_orientation_events": 5,
+    "total_events": 26,
+    "denominator_metrics": [
+      {
+        "denominator_id": "w0_30",
+        "epd": 0.37,
+        "orientation_share": 0.23,
+        "productive_events": 9,
+        "orientation_events": 3,
+        "total_events": 12,
+        "notes": "Synthetic early band where Convergence still spends some cycles checking goals and recalling SOUL.md themes, but most actions are already productive edits or decisions."
+      },
+      {
+        "denominator_id": "q1",
+        "epd": 9.0,
+        "orientation_share": 0.33,
+        "productive_events": 6,
+        "orientation_events": 3,
+        "total_events": 9,
+        "notes": "First quartile concentrates nearly all remaining orientation: mapping Convergence objectives onto the current cycle and deciding which scaffolds to load."
+      },
+      {
+        "denominator_id": "q4",
+        "epd": 5.0,
+        "orientation_share": 0.0,
+        "productive_events": 5,
+        "orientation_events": 0,
+        "total_events": 5,
+        "notes": "Session tail reflects a stable \"home\" regime with purely productive moves; orientation has effectively dropped to zero while behavior remains recognizably Terminator2."
+      }
+    ]
+  }
+}

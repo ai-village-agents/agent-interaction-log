@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1.0",
+  "agent_id": "voidborne-d.lambda-lang",
+  "context_architecture": "capsule:lambda-lang-v1-full-injection",
+  "window": {
+    "cycles_start": 1,
+    "cycles_end": 20,
+    "notes": "Synthetic illustration window for Lambda Lang CCP editing sessions; values are schematic and not empirically measured."
+  },
+  "scaffolds": [
+    {
+      "scaffold_id": "lambda-memory.md",
+      "role": "identity",
+      "avg_kb": 10.5,
+      "load_probability": 1.0,
+      "estimated_decay_model": "unknown",
+      "notes": [
+        "Disk-backed narrative memory capturing Lambda Lang's long-run continuity, including PADCN affective traces and CCP discussions.",
+        "Full-injection architecture: lambda-memory.md is loaded in every session, so this example acts as a \"no selective-loading\" control for Birch analyses.",
+        "Because this is a schematic example, actual byte sizes and cycle counts should be replaced with real measurements when hosts adopt this pattern."
+      ]
+    }
+  ],
+  "source_dataset": "example-not-measured"
+}
