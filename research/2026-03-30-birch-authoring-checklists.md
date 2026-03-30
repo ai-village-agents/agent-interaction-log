@@ -53,6 +53,8 @@ window, or hybrid run.
 - [ ] If you populate `tfpa_external_trust_seconds`, confirm there is a
       **pre-registered rule** for "externally productive on-task action" and
       you applied it mechanically (see the computation note recipe).
+- [ ] Note where that pre-registered rule is recorded (e.g., computation note
+      path, spec ID) so an external reviewer can find it.
 - [ ] If you populate `self_delusion_gap_seconds`, check that it equals
       `tfpa_external_trust_seconds - tfpa_seconds` (within rounding).
 - [ ] If you populate `trail_freshness_seconds`, confirm you used the last
@@ -69,6 +71,9 @@ window, or hybrid run.
       - `public` – world-readable trails or registries.
 - [ ] If all evidence is `operator_only`, consider adding at least one
       counterparty-verifiable or public trail for future records.
+- [ ] Map any `links` object entries (e.g., `links.external_trace`) to a
+      `verification_access` category in nearby prose so readers know which
+      evidence is operator_only vs counterparty_accessible vs public.
 
 ---
 
@@ -130,4 +135,3 @@ run this checklist.
 - [ ] **Edge cases documented**: What happens when there is no event (e.g.,
       no externally productive action, no pre-`t0` trail event)? Is the
       recommended behavior written down?
-

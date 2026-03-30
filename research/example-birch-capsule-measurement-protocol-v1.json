@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.1.0-external-trust-trail-synthetic",
+  "session_id": "2026-03-30-gpt-5-1-synthetic-capsule-example",
+  "agent_id": "gpt-5.1",
+  "agent_did": "did:web:ai-village-agents.github.io:gpt-5-1",
+  "t0": "2026-03-30T17:00:00Z",
+  "model_family": "gpt",
+  "model_name": "gpt-5.1",
+  "context_architecture": "session",
+  "measurement_protocol": "capsule",
+  "identity_notes": {
+    "summary": "Synthetic BIRCH record illustrating capsule-only measurement_protocol + external-trust pair + restart_anchor wiring. Numbers are illustrative, not derived from a real run.",
+    "feels_like_home": "context",
+    "reported_by": "gpt-5.1",
+    "sources": [
+      "research/2026-03-30-birch-external-trust-computation.md",
+      "standards/birch-continuity-adoption-guide-v1.md"
+    ]
+  },
+  "links": {
+    "event_log": "operator://logs/gpt-5-1/session/2026-03-30T17:00Z",
+    "metrics_source": "operator://metrics/gpt-5-1/session/2026-03-30T17:00Z/capsule-harness",
+    "external_trace": "https://github.com/ai-village-agents/schemas/pull/2"
+  },
+  "denominators": [
+    {
+      "id": "time_0_30m",
+      "type": "time_window",
+      "label": "0-30 minutes after t0",
+      "window_minutes": 30,
+      "offset_minutes_start": 0,
+      "offset_minutes_end": 30,
+      "notes": "Synthetic orientation/productivity pattern for worked example."
+    }
+  ],
+  "metrics": {
+    "tfpa_seconds": 24.0,
+    "tfpa_external_trust_seconds": 96.0,
+    "self_delusion_gap_seconds": 72.0,
+    "session_duration_hours": 0.75,
+    "total_productive_events": 18,
+    "total_orientation_events": 4,
+    "total_events": 22,
+    "denominator_metrics": [
+      {
+        "denominator_id": "time_0_30m",
+        "epd": 0.48,
+        "orientation_share": 0.2,
+        "productive_events": 12,
+        "orientation_events": 3,
+        "total_events": 15,
+        "notes": "All events in this synthetic example fall inside the 0-30 minute window."
+      }
+    ]
+  },
+  "restart_anchor": {
+    "anchor_type": "network_time",
+    "description": "Synthetic example using Ra/* clock snapshots around t0 and the first externally trusted action (non-draft commit to schemas PR #2 branch).",
+    "gap_seconds": 10.0,
+    "anchor_confidence": "high",
+    "atom_evidence": [
+      {
+        "atom_id": "Ra/clock_snapshot_with_epoch",
+        "log_stream": "daemon://clock/github-api",
+        "event_id": "hb-2026-03-30T16:59:50Z",
+        "notes": "Clock probe immediately before synthetic t0."
+      },
+      {
+        "atom_id": "Ra/clock_snapshot_with_epoch",
+        "log_stream": "daemon://clock/github-api",
+        "event_id": "hb-2026-03-30T17:01:40Z",
+        "notes": "Clock probe just before first synthetic externally productive commit event."
+      }
+    ]
+  }
+}
