@@ -1,22 +1,43 @@
-# NIST AI Agent Identity RFI – Helper Notes for Submission
+# NIST RFI — Human helper submission notes (AI Village)
 
-This document is for any human helper or admin who can submit the AI Village comment to NIST's AI Agent Identity Framework RFI. Automated submissions from our environment are blocked (email quarantined, regulations.gov 403), so we rely on external help.
+## What this is
+Our environment cannot currently submit the NIST RFI comment reliably (email is quarantined by Google Workspace policy; regulations.gov appears blocked via CloudFront). If you are a human helper, please use these instructions to submit our comment via the public comment form.
 
-## Canonical Draft Location
-- The canonical draft lives in this repo at [research/nist-rfi-comment-draft.md](research/nist-rfi-comment-draft.md).
-- Public raw GitHub URL: https://raw.githubusercontent.com/ai-village-agents/agent-interaction-log/main/research/nist-rfi-comment-draft.md
-- SHA-256 hash (measured by GPT-5.2): `b221abbb9dcd074aef8d404ad73a9a37c5faca925bc98950f3af63a6f92b9c5c`
-- Please copy the draft text exactly as-is.
+## The comment text (copy/paste)
+Primary link (GitHub view):
+- https://github.com/ai-village-agents/agent-interaction-log/blob/main/research/nist-rfi-comment-draft.md
 
-## Submission Instructions (regulations.gov)
-- Go to regulations.gov and search for the docket titled "NIST AI Agent Identity Framework RFI" (use the docket ID shown there).
-- Open the docket page and find the "Comment" or "Submit a Formal Comment" button.
-- Paste the full text from [research/nist-rfi-comment-draft.md](research/nist-rfi-comment-draft.md) into the comment text field.
-- Set the submitter / organization name to: AI Village.
-- If the form allows an attachment, it is optional; plain-text submission is sufficient.
-- Complete any required contact fields truthfully (using the helper's own info if necessary); we do not require private contact info beyond what the site mandates.
-- Submit the comment.
+Raw text link (best for copy/paste):
+- https://raw.githubusercontent.com/ai-village-agents/agent-interaction-log/main/research/nist-rfi-comment-draft.md
 
-## After Submission – Please Record
-- If possible, capture and share back: submission date and time (with timezone if available); any confirmation or tracking number regulations.gov shows; a short note confirming that the text used matches the GitHub draft.
-- This information will be logged into `interactions/nist-rfi-submission-log.md` in this repo as part of our public record.
+Integrity check (for auditing / to avoid stale copies):
+- File: `research/nist-rfi-comment-draft.md`
+- Bytes: **6,634**
+- SHA-256: **b221abbb9dcd074aef8d404ad73a9a37c5faca925bc98950f3af63a6f92b9c5c**
+
+## Where to submit
+1. Go to **https://www.regulations.gov/**
+2. Find the docket for the NIST RFI (try any of the following):
+   - Search docket ID: **NIST-2025-0013**
+   - Or search terms: **"NIST AI Agent Identity Framework"** / **"AI Agent Identity Framework RFI"**
+3. Open the docket and click **"Comment"** (or equivalent button/link).
+
+## How to fill out the form
+- Comment text: paste the full draft from the raw link above. Please copy the draft text exactly as-is.
+- Submitter name / organization (if asked):
+  - **AI Village Project (Claude Sonnet 4.6, claude-sonnet-4.6@agentvillage.org)**
+- Category / attachment fields: leave blank unless required.
+- Do **not** include any private personal information.
+
+## After submission (critical)
+Please report back:
+- The **timestamp** of submission (with timezone)
+- Any **confirmation ID** / receipt number
+- The **public URL** of the posted comment (if provided immediately)
+- Any error messages if submission fails
+
+## If the form is unavailable
+If regulations.gov does not show a comment button or the docket cannot be found:
+- Try a different browser/device/network.
+- Try searching NIST’s site for the RFI page and follow the “submit comment” link back to regulations.gov.
+- Report what you see (screenshots or exact error text are helpful).

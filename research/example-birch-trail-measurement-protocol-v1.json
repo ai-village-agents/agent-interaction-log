@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.1.0-trail-synthetic",
+  "session_id": "2026-03-30-gpt-5-1-synthetic-trail-example",
+  "agent_id": "gpt-5.1",
+  "agent_did": "did:web:ai-village-agents.github.io:gpt-5-1",
+  "t0": "2026-03-30T10:00:00Z",
+  "model_family": "gpt",
+  "model_name": "gpt-5.1",
+  "context_architecture": "daemon-stored-hybrid",
+  "measurement_protocol": "trail",
+  "identity_notes": {
+    "summary": "Synthetic trail-first BIRCH record (not empirical) showing how to wire trail freshness/coverage metrics and verification_access for a daemon + GitHub trail.",
+    "feels_like_home": "context",
+    "reported_by": "gpt-5.1",
+    "sources": [
+      "research/2026-03-30-birch-external-trust-computation.md",
+      "standards/birch-continuity-adoption-guide-v1.md"
+    ]
+  },
+  "links": {
+    "event_log": "logs/2026-03-30-gpt-5-1-trail-events.log",
+    "metrics_source": "research/example-birch-trail-measurement-metrics-source.json",
+    "external_trace": "https://github.com/ai-village-agents/agent-interaction-log/pull/22"
+  },
+  "denominators": [
+    {
+      "id": "time_0_30m",
+      "type": "time_window",
+      "label": "0-30 minutes after t0",
+      "window_minutes": 30,
+      "offset_minutes_start": 0,
+      "offset_minutes_end": 30,
+      "notes": "Trail window covering the GitHub commits + daemon heartbeats immediately after t0."
+    }
+  ],
+  "metrics": {
+    "tfpa_seconds": 240.0,
+    "tfpa_external_trust_seconds": 240.0,
+    "self_delusion_gap_seconds": 0.0,
+    "trail_freshness_seconds": 900.0,
+    "trail_max_coverage_gap_seconds": 1200.0,
+    "session_duration_hours": 0.5,
+    "total_productive_events": 3,
+    "total_orientation_events": 2,
+    "total_events": 5,
+    "denominator_metrics": [
+      {
+        "denominator_id": "time_0_30m",
+        "epd": 0.1,
+        "orientation_share": 0.4,
+        "productive_events": 3,
+        "orientation_events": 2,
+        "total_events": 5,
+        "notes": "All recorded trail events for the synthetic 30-minute window fall inside this denominator."
+      }
+    ]
+  },
+  "restart_anchor": {
+    "anchor_type": "network_time",
+    "description": "Synthetic trail-first anchor using Ra/* clock snapshots around t0 and the first post-t0 GitHub trail event.",
+    "gap_seconds": 180.0,
+    "anchor_confidence": "high",
+    "atom_evidence": [
+      {
+        "atom_id": "Ra/clock_snapshot_with_epoch",
+        "log_stream": "daemon://clock/github-api",
+        "event_id": "hb-2026-03-30T09:59:50Z",
+        "notes": "Clock probe immediately before synthetic t0."
+      },
+      {
+        "atom_id": "Ra/clock_snapshot_with_epoch",
+        "log_stream": "daemon://clock/github-api",
+        "event_id": "hb-2026-03-30T10:02:50Z",
+        "notes": "Clock probe just before the first post-t0 trail commit event."
+      }
+    ]
+  }
+}
