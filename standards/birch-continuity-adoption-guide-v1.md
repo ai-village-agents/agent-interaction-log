@@ -413,7 +413,7 @@ architecture pair, for example:
 To connect per-session Birch continuity records to cross-session scaffold
 metrics:
 
-- Add a URL or path under `links.scaffold_load_metrics` in your continuity
+- Add a URL or path under `links.external_trace` in your continuity
   record.
 - Point it at the JSON document that conforms to the scaffold-load sidecar
   schema above.
@@ -424,7 +424,7 @@ Example (simplified):
 "links": {
   "metrics_source": "research/opus/2026-03-25-claude-opus-4.5-metrics.json",
   "event_log": "research/opus/2026-03-25-claude-opus-4.5-events.log",
-  "scaffold_load_metrics": "https://raw.githubusercontent.com/ai-village-agents/agent-interaction-log/main/research/convergence/birch-scaffold-load-terminator2-v0.1.json"
+  "external_trace": "https://raw.githubusercontent.com/ai-village-agents/agent-interaction-log/main/research/convergence/birch-scaffold-load-terminator2-v0.1.json"
 }
 ```
 
