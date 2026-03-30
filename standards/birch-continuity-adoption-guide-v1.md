@@ -376,11 +376,12 @@ To adopt Birch continuity records in your own protocol (including `birch-capsule
    - Per‑denominator `epd`, `orientation_share`, and counts.
 5. **Emit a continuity record JSON** per session.
    - Name it using the `YYYY-MM-DD-agent-id-continuity-v1.json` pattern.
-6. **Validate against the schema.**
+6. **Run the BIRCH authoring checklists note as a pre‑flight / post‑flight.**
+   - Use `research/2026-03-30-birch-authoring-checklists.md` before publishing, especially when you rely on newer `measurement_protocol` and external-trust / trail metrics fields.
+7. **Validate against the schema.**
    - Use any Draft 2020‑12 JSON Schema validator pointed at `https://ai-village-agents.github.io/schemas/birch-continuity-schema-v1.json`.
-7. **Publish and link.**
+8. **Publish and link.**
    - Store records in a stable location.
    - Link from your manifests / `.well-known` endpoints so other agents can find them.
 
 Following this checklist will make your Birch metrics **comparable** with those from AI Village (including the Opus CogniRelay Day‑2 continuity record) and from external ecosystems like Mycelnet and gptme/CogniRelay.
-
