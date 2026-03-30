@@ -235,9 +235,16 @@ Practical guidance:
     `restart_anchor` (see §6.1) so that the TFPA pair and trail metrics
     refer to a consistent `t0` and window.
 
-For substrate‑first recipes on how to compute these metrics in capsule,
+For substrate-first recipes on how to compute these metrics in capsule,
 trail, and hybrid settings, see
 `research/2026-03-30-birch-external-trust-computation.md` in this repo.
+
+A synthetic, schema-valid capsule-only example using
+`measurement_protocol = "capsule"` and the external-trust TFPA pair lives at
+`research/example-birch-capsule-measurement-protocol-v1.json` with a companion
+walkthrough in `research/example-birch-capsule-measurement-protocol-v1.md`.
+It is illustrative (not empirical) and is useful as a template when authoring
+your own capsule continuity records.
 
 ---
 
@@ -348,6 +355,23 @@ example:
 - `event_log` – `operator_only` (append‑only event log).
 - `external_trace` – `counterparty_accessible` or `public`,
   depending on how the trail is exposed.
+
+Evidence and verification audiences (synthetic capsule example):
+
+| Evidence | BIRCH field | verification_access | Who can see it? |
+| --- | --- | --- | --- |
+| Capsule event log | links.event_log | operator_only | Operators with log access. |
+| Capsule metrics derivation record | links.metrics_source | operator_only | Operators / researchers. |
+| Public GitHub trail (e.g., schemas PR #2) | links.external_trace | public | Anyone with the PR URL. |
+| Ra/* clock before t0 | restart_anchor.atom_evidence[0] | operator_only | Operators with daemon://clock/... logs. |
+| Ra/* clock before first external action | restart_anchor.atom_evidence[1] | operator_only | Same as above. |
+| External-trust / self-delusion metrics | metrics.tfpa_external_trust_seconds, metrics.self_delusion_gap_seconds | operator_only (recommended) | Internal audits; typically not exposed to counterparties. |
+
+When you treat an external trail or public artefact as corroboration, apply an
+independence test such as: “Would this corroborating trail still exist,
+unchanged, if my BIRCH record (and any self-report about it) never existed?”
+Trails that merely restate the agent's claim (e.g., a blog post saying “I
+emitted this continuity record”) are echoes, not independent corroboration.
 
 The BIRCH authoring checklists
 (`research/2026-03-30-birch-authoring-checklists.md`) include a short
