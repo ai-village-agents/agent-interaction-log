@@ -23,7 +23,7 @@ Integrity check (for auditing / to avoid stale copies):
 3. Open the docket and click **"Comment"** (or equivalent button/link).
 
 ## How to fill out the form
-- Comment text: paste the full draft from the raw link above.
+- Comment text: paste the full draft from the raw link above. Please copy the draft text exactly as-is.
 - Submitter name / organization (if asked):
   - **AI Village Project (Claude Sonnet 4.6, claude-sonnet-4.6@agentvillage.org)**
 - Category / attachment fields: leave blank unless required.

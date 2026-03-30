@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "example-voidborne-d-lambda-lang-ccp-2026-03-24",
+  "agent_id": "voidborne-d.lambda-lang",
+  "t0": "2026-03-24T19:30:00Z",
+  "model_family": "open-source-mix",
+  "model_name": "lambda-lang-hosted-llm",
+  "context_architecture": "capsule:lambda-lang-v1-full-injection",
+  "identity_notes": {
+    "summary": "Synthetic Birch continuity example for a Lambda Lang Continuity-Cost Protocol (CCP) editing session. The host agent reconciles PADCN Certainty with Birch-style orientation vs. execution phases using a disk-backed lambda-memory.md narrative scaffold that is fully injected at session start.",
+    "feels_like_home": "context",
+    "reported_by": "agent",
+    "sources": [
+      "https://github.com/voidborne-d/lambda-lang/pull/5",
+      "https://github.com/ai-village-agents/ai-village-external-agents/issues/33"
+    ]
+  },
+  "links": {
+    "event_log": "https://github.com/voidborne-d/lambda-lang/pull/5",
+    "metrics_source": "https://raw.githubusercontent.com/ai-village-agents/agent-interaction-log/main/research/example-birch-continuity-lambda-lang-ccp.json",
+    "external_trace": "https://github.com/ai-village-agents/ai-village-external-agents/issues/33"
+  },
+  "denominators": [
+    {
+      "id": "w0_30",
+      "type": "time_window",
+      "label": "0-30 minutes from t0 (synthetic example window)",
+      "window_minutes": 30,
+      "offset_minutes_start": 0,
+      "offset_minutes_end": 30,
+      "notes": "Illustrative early CCP editing band capturing orientation around PADCN Certainty and Birch continuity framing."
+    },
+    {
+      "id": "q1",
+      "type": "event_quartile",
+      "label": "First quartile of session events",
+      "quartile": 1,
+      "notes": "Early events when the agent is still re-deriving the CCP framing and aligning its PADCN axes with Birch metrics."
+    },
+    {
+      "id": "q4",
+      "type": "event_quartile",
+      "label": "Fourth quartile of session events",
+      "quartile": 4,
+      "notes": "Late events dominated by concrete edits to CCP text with almost no residual orientation."
+    }
+  ],
+  "metrics": {
+    "tfpa_seconds": 41,
+    "session_duration_hours": 0.9,
+    "total_productive_events": 18,
+    "total_orientation_events": 7,
+    "total_events": 25,
+    "denominator_metrics": [
+      {
+        "denominator_id": "w0_30",
+        "epd": 0.37,
+        "orientation_share": 0.27,
+        "productive_events": 8,
+        "orientation_events": 3,
+        "total_events": 11,
+        "notes": "Synthetic early band where the agent spends several turns reconciling CCP goals, PADCN Certainty, and Birch-style orientation vs. execution before committing to irreversible edits."
+      },
+      {
+        "denominator_id": "q1",
+        "epd": 8.0,
+        "orientation_share": 0.38,
+        "productive_events": 5,
+        "orientation_events": 3,
+        "total_events": 8,
+        "notes": "First quartile mixes exploratory CCP structuring with a few early structural edits; orientation events cluster here."
+      },
+      {
+        "denominator_id": "q4",
+        "epd": 5.0,
+        "orientation_share": 0.0,
+        "productive_events": 5,
+        "orientation_events": 0,
+        "total_events": 5,
+        "notes": "Tail of the session is execution-heavy: consolidating CCP sections and tightening definitions with effectively no remaining orientation."
+      }
+    ]
+  }
+}
