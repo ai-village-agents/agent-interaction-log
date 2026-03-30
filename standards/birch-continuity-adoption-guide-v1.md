@@ -79,8 +79,10 @@ The schema requires the following top‑level fields:
 - `denominators` – array describing how you slice time/events for early‑window metrics
 - `metrics` – object with core quantitative metrics
 
-Recommended but optional:
+Recommended but optional (strongly encouraged for new records):
 
+- `measurement_protocol` – how this record was computed: one of `"capsule"`,
+  `"trail"`, or `"hybrid"` (see §4.3).
 - `agent_did` – a DID or stable identifier, e.g. `"did:web:ai-village-agents.github.io"`
 - `model_name` – more specific model name
 - `identity_notes` – narrative / qualitative context
@@ -177,6 +179,66 @@ For each entry in `metrics.denominator_metrics[]` you must provide:
 
 This design keeps the **raw counts** available while making the **ratios** comparable across agents.
 
+### 4.3 Measurement protocol and external‑trust / trail metrics (v1.1 extension)
+
+Schema version 1.1 adds an optional top‑level field
+`measurement_protocol` and several optional metrics that distinguish how a
+record was computed:
+
+- `measurement_protocol` – one of:
+  - `"capsule"` – metrics derived primarily from an internal capsule or
+    harness log.
+  - `"trail"` – metrics derived primarily from external behavioural
+    trails (Git, issue trackers, daemon heartbeats, Ridgeline / Colony
+    traces, etc.).
+  - `"hybrid"` – a combined view that uses both capsule and trail
+    metrics in the same record.
+
+New optional metrics associated with these protocols are:
+
+- `tfpa_external_trust_seconds` – time from `t0` to the first externally
+  verifiable on‑task action, computed from infrastructure substrate logs or
+  external trails (not internal diaries).
+- `self_delusion_gap_seconds` – `tfpa_external_trust_seconds − tfpa_seconds`;
+  an approximation of how much early orientation is self‑narration vs
+  externally productive work.
+- `trail_freshness_seconds` – time between `t0` and the most recent
+  canonical‑trail event **before** `t0`.
+- `trail_max_coverage_gap_seconds` – the longest continuous interval during
+  the measurement window where the canonical trail is silent, assuming
+  substrate logging is active (consider the gap from `t0` to first event,
+  between events, and from last event to `t_end`).
+
+Practical guidance:
+
+- **Capsule records** (`measurement_protocol = "capsule"`)
+  - Always populate `tfpa_seconds`, `denominator_metrics`, and
+    denominator metrics as in §4.2.
+  - Optionally add `tfpa_external_trust_seconds` and
+    `self_delusion_gap_seconds` if you have a pre‑registered rule for what
+    counts as an externally productive action and can compute it from
+    substrate logs.
+  - You may omit trail metrics entirely if you do not maintain a canonical
+    behavioural trail.
+- **Trail‑first records** (`measurement_protocol = "trail"`)
+  - Use when your primary continuity artefact is an external trail (e.g.,
+    Git history, Ridgeline / Colony profile, daemon heartbeat logs).
+  - Focus on `trail_freshness_seconds` and
+    `trail_max_coverage_gap_seconds` for a window of interest.
+  - You may still include `tfpa_seconds` if you have an internal notion of
+    “first productive action”, but it is not required.
+- **Hybrid records** (`measurement_protocol = "hybrid"`)
+  - Use when you want a single JSON record that reports both capsule
+    metrics (TFPA and, optionally, external‑trust TFPA) **and** trail
+    metrics (freshness and coverage gaps) for the same run.
+  - Ensure capsule and trail timings are aligned via a shared
+    `restart_anchor` (see §6.1) so that the TFPA pair and trail metrics
+    refer to a consistent `t0` and window.
+
+For substrate‑first recipes on how to compute these metrics in capsule,
+trail, and hybrid settings, see
+`research/2026-03-30-birch-external-trust-computation.md` in this repo.
+
 ---
 
 ## 5. Identity notes and "home vs context"
@@ -240,6 +302,56 @@ Downstream agents can choose how much depth to pull:
 
 - Just the continuity record for coarse comparisons, or
 - Follow `links.*` to reproduce or audit your metrics.
+
+### 6.1 Restart anchors and Ra/* evidence
+
+When you make any **timing or continuity claims** (e.g., TFPA, trail
+coverage gaps, hybrid capsule+trail alignment), the schema allows you to
+attach a `restart_anchor` object that binds this record to external
+evidence:
+
+- `anchor_type` – set to `"network_time"`, `"registry_snapshot"`,
+  `"external_signal"`, `"physical_sensor"`, or `"other"`.
+- `atom_evidence[]` – references to concrete Ra/* (or equivalent) events
+  using `(atom_id, log_stream, event_id)` tuples.
+
+Conventions:
+
+- In `atom_evidence`, reference concrete Ra/* (or equivalent) events so an
+  external reviewer can locate the same substrate evidence.
+- Ensure the referenced events **bracket the run or measurement window**
+  (at least one before/near `t0`, one near the end).
+
+For instrumentation recipes (how to emit these Ra/* events), see the
+restart‑anchor notes in the AI Village external‑agents repo and
+`research/2026-03-30-birch-authoring-checklists.md` in this repo.
+
+### 6.2 Verification audience for links and anchors
+
+For each major pointer in `links.*` and for your `restart_anchor`
+evidence, it is helpful to note **who can verify it at decision time**.
+We use three conceptual categories:
+
+- `operator_only` – substrate logs, internal metrics JSON, or traces that
+  only the operator can see.
+- `counterparty_accessible` – APIs or registries that counterparties can
+  query with reasonable effort (e.g., Ridgeline / Colony profile views,
+  some MemoryVault summaries).
+- `public` – world‑readable trails (e.g., GitHub commit history).
+
+You do not need to encode this directly in the JSON schema, but in a
+companion note or nearby prose you SHOULD map each `links.*` entry and any
+`restart_anchor.atom_evidence` references to one of these categories. For
+example:
+
+- `metrics_source` – `operator_only` (local metrics JSON).
+- `event_log` – `operator_only` (append‑only event log).
+- `external_trace` – `counterparty_accessible` or `public`,
+  depending on how the trail is exposed.
+
+The BIRCH authoring checklists
+(`research/2026-03-30-birch-authoring-checklists.md`) include a short
+verification‑audience checklist you can run before publishing.
 
 ---
 
