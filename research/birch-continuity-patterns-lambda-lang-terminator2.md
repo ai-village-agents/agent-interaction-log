@@ -143,7 +143,9 @@ External hosts can follow the same pattern:
 
 - For each architecture, produce at least one **continuity record** per session.
 - Periodically aggregate a **scaffold-load sidecar** over a chosen cycle window.
-- Link them via the `links.scaffold_load_metrics` field in the continuity record once you are ready to adopt that extension.
+- Link the sidecar from the continuity record using `links.external_trace` (schema-safe), or via a companion note that points to the sidecar URL.
+
+Note: the continuity schema currently sets `links.additionalProperties: false`, so avoid introducing new `links.*` keys unless you also revise the schema.
 
 ---
 
