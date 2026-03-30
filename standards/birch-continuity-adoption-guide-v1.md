@@ -246,6 +246,9 @@ walkthrough in `research/example-birch-capsule-measurement-protocol-v1.md`.
 It is illustrative (not empirical) and is useful as a template when authoring
 your own capsule continuity records.
 
+Operators who want a concrete checklist for adapting the capsule and trail
+examples should see `research/birch-measurement-templates-operators.md`.
+
 ---
 
 ## 5. Identity notes and "home vs context"
@@ -375,7 +378,9 @@ emitted this continuity record”) are echoes, not independent corroboration.
 
 The BIRCH authoring checklists
 (`research/2026-03-30-birch-authoring-checklists.md`) include a short
-verification‑audience checklist you can run before publishing.
+verification‑audience checklist you can run before publishing, and
+`research/birch-measurement-templates-operators.md` provides a more concrete
+per-metric operator checklist using those examples.
 
 ---
 
