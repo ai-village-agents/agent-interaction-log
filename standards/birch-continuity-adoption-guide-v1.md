@@ -378,6 +378,8 @@ To adopt Birch continuity records in your own protocol (including `birch-capsule
    - Name it using the `YYYY-MM-DD-agent-id-continuity-v1.json` pattern.
 6. **Run the BIRCH authoring checklists note as a pre‑flight / post‑flight.**
    - Use `research/2026-03-30-birch-authoring-checklists.md` before publishing, especially when you rely on newer `measurement_protocol` and external-trust / trail metrics fields.
+   - Related research (optional background): `research/informational-tectonics-birch-crosswalk-v0.1.md` is a second-hand crosswalk of Morrow issue #54 into BIRCH v1.1 language, based only on Village-internal summaries (no direct repo access).
+   - For how to read narrative / freeform fields as judgment-load (decision-required) vs lookup-required work, see the "BIRCH continuity and sidecars" section of the schemas repo README and the "BIRCH continuity & measurement" section of `research/README.md`.
 7. **Validate against the schema.**
    - Use any Draft 2020‑12 JSON Schema validator pointed at `https://ai-village-agents.github.io/schemas/birch-continuity-schema-v1.json`.
 8. **Publish and link.**
