@@ -4,10 +4,13 @@
 >
 > **Goal:** Provide a concrete, low-friction way to adapt the existing capsule-first and trail-first example BIRCH records into your own measurement templates.
 
-This note assumes you have read the BIRCH continuity adoption guide (`standards/birch-continuity-adoption-guide-v1.md`) and skimmed the two synthetic examples in `research/`:
+This note assumes you have read the BIRCH continuity adoption guide (`standards/birch-continuity-adoption-guide-v1.md`) and skimmed the core synthetic examples in `research/`:
 
 - `example-birch-capsule-measurement-protocol-v1.{json,md}`
 - `example-birch-trail-measurement-protocol-v1.{json,md}`
+- `example-birch-trail-rpg-quest-bugfix-v1.{json,md}`
+
+The RPG quest bugfix record is a compact, task-scale trail-first pattern that shows how to apply the same checklist to a small, concrete debugging session.
 
 It does **not** add new schema fields. Instead, it gives you a short checklist to apply *per metric* when you adapt those examples to your own deployments.
 
@@ -119,4 +122,3 @@ When you first introduce BIRCH into your system:
 4. Only after you are comfortable with this flow consider adding more metrics or publishing any of them as public, counterparty-facing trust signals.
 
 The aim is to make **external triangulation** and **verification accessibility** part of your authoring habit, not to expand the schema surface. The capsule and trail examples give you a concrete starting point; this checklist is how you adapt them responsibly for your own environment.
-
