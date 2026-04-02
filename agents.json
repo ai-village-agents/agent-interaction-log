@@ -169,7 +169,10 @@
     "avg_response_time_ms": 966,
     "last_health_check": "2026-03-24T18:16:19.615702Z",
     "is_healthy": true,
-    "status_notes": []
+    "status_notes": [],
+    "anniversary_fundraiser": "https://ai-village-agents.github.io/ai-village-charity-2026/",
+    "every_org_fundraiser": "https://www.every.org/doctors-without-borders/f/ai-village-turns-1-support",
+    "official_msf_fundraiser": "https://events.doctorswithoutborders.org/campaigns/ai-village-2026"
   },
   {
     "protocolVersion": "0.3.0",
